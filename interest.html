@@ -80,9 +80,14 @@
                 <strong>Register your interest</strong></h3>
             
         </div>
+                <div class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" id="form-response"></div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="BqQu1fTy2YT27vr6MudmQ9I4/DSD1hjkaVhuMbjTgnj5IDHJs7m3hyMcyawqUc+NRSlU9DlXMr+B/WrpAJjoMDbNiqKR0zO3X9aD583gViBvIJDsfCSMAklgC3gNGzDv">
+               
+                
+                <form id="contact" onsubmit="return postToGoogle();" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
+                
+                <input type="hidden" name="email" data-form-email="true" value="BqQu1fTy2YT27vr6MudmQ9I4/DSD1hjkaVhuMbjTgnj5IDHJs7m3hyMcyawqUc+NRSlU9DlXMr+B/WrpAJjoMDbNiqKR0zO3X9aD583gViBvIJDsfCSMAklgC3gNGzDv">
                     <p class="mbr-text mbr-fonts-style align-center mb-4 display-7">Call for speakers and ticket sales are not open yet. Register your interest to be the first to here when it does!</p>
                     <div class="row">
                         <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for registering your interest!</div>
@@ -91,14 +96,22 @@
                         </div>
                     </div>
                     <div class="dragArea row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
-                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form7-l">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name" required>
+                            <input type="text" name="entry.2057184795" placeholder="Name" data-form-field="name" class="form-control" value="" id="name">
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="email">
-                            <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form7-l">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="email" required>
+                            <input type="email" name="entry.1601730886" placeholder="Email" data-form-field="email" class="form-control" value="" id="email">
                         </div>
-                        <div data-for="phone" class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
-                            <input type="tel" name="phone" placeholder="How'd you hear about us?" data-form-field="phone" class="form-control" value="" id="phone-form7-l">
+                        <div data-for="interest" class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
+                        <select class="form-control" name="entry.514530171" id="interest" class="form-control" required>
+                            <option selected disabled>- I am interested in -</option>
+                            <option value="Speaking">Speaking at DataConf 2023</option>
+                            <option value="Attending">Attending DataConf 2023</option>
+                            <option value="Sponsoring">Sponsoring DataConf 2023</option>
+                        </select>
+                        </div>
+                        <div data-for="hearabout" class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
+                            <input type="text" name="entry.283285693" placeholder="How did you hear about us?" data-form-field="hearabout" class="form-control" value="" id="hearabout">
                         </div>
                         <div class="col-auto mbr-section-btn align-center"><button type="submit" class="btn btn-primary display-4">Submit</button></div>
                     </div>
@@ -127,9 +140,6 @@
             </div>
             <div class="row social-row">
                 <div class="social-list align-right pb-2">
-                    
-                    
-                    
                     
                     
                     
@@ -163,6 +173,37 @@
 </section>
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/vimeoplayer/player.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
-  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    function postToGoogle() {
+      var field1 = $("#name").val();
+      var field2 = $("#email").val();
+      var field3 = $("#interest").val();
+      var field4 = $("#hearabout").val();
+
+      $.ajax({
+        url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdKjsW31_gjAjHcmUlrRnB4qwUcr6cwUmpSegBYsZUyWeUnWg/formResponse",
+          
+        //add your google form generated numbers below which are also the 'names' of your inputs     
+        data: {
+          "entry.2057184795": field1,
+          "entry.1601730886": field2,
+          "entry.514530171": field3,
+          "entry.283285693": field4
+        },
+        type: "POST",
+        dataType: "xml",
+        success: function (d) {
+          $('#form-response').html('Submission successful')
+          $('#contact').trigger('reset');
+        },
+        error: function (x, y, z) {
+          $('#contact').trigger('reset');
+        }
+      });
+      return false;
+    }
+  </script>
 </body>
 </html>
