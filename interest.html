@@ -181,8 +181,8 @@
       var field2 = $("#email").val();
       var field3 = $("#interest").val();
       var field4 = $("#hearabout").val();
-      $('#thanks_register').attr("hidden",true)
-      $('#error_submit').attr("hidden",true)
+    //   $('#thanks_register').attr("hidden",true)
+    //   $('#error_submit').attr("hidden",true)
 
       $.ajax({
         url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdKjsW31_gjAjHcmUlrRnB4qwUcr6cwUmpSegBYsZUyWeUnWg/formResponse",
@@ -201,26 +201,32 @@
           $('#contact').trigger('reset');
         },
         error: function (jqXHR, exception) {
-          var msg = 'Oops! An error ocurred: ';
-          if (jqXHR.status === 0) {
-              msg += 'Not connect.\n Verify Network.';
-          } else if (jqXHR.status == 404) {
-              msg += 'Requested page not found. [404]';
-          } else if (jqXHR.status == 500) {
-              msg += 'Internal Server Error [500].';
-          } else if (exception === 'parsererror') {
-              msg += 'Requested JSON parse failed.';
-          } else if (exception === 'timeout') {
-              msg += 'Time out error.';
-          } else if (exception === 'abort') {
-              msg += 'Ajax request aborted.';
-          } else {
-              msg += 'Uncaught Error.\n' + jqXHR.responseText;
-          }
-          $('#error_submit').html(msg);
-          $('#error_submit').removeAttr('hidden')
+          console.log(exception)
+        //   var msg = 'Oops! An error ocurred: ';
+        //   if (jqXHR.status === 0) {
+        //       msg += 'Not connect.\n Verify Network.';
+        //   } else if (jqXHR.status == 404) {
+        //       msg += 'Requested page not found. [404]';
+        //   } else if (jqXHR.status == 500) {
+        //       msg += 'Internal Server Error [500].';
+        //   } else if (exception === 'parsererror') {
+        //       msg += 'Requested JSON parse failed.';
+        //   } else if (exception === 'timeout') {
+        //       msg += 'Time out error.';
+        //   } else if (exception === 'abort') {
+        //       msg += 'Ajax request aborted.';
+        //   } else {
+        //       msg += 'Uncaught Error.\n' + jqXHR.responseText;
+        //   }
+        //   $('#error_submit').html(msg);
+        //   $('#error_submit').removeAttr('hidden')
+        //   $('#contact').trigger('reset');
+        },
+        complete: function (d) {
+          console.log(d)
+          $('#thanks_register').removeAttr('hidden')
           $('#contact').trigger('reset');
-    }
+        },
       });
       return false;
     }
