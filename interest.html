@@ -107,11 +107,16 @@
                             <option selected disabled>- I am interested in -</option>
                             <option value="Speaking">Speaking at DataConf 2023</option>
                             <option value="Attending">Attending DataConf 2023</option>
-                            <option value="Sponsoring">Sponsoring DataConf 2023</option>
                         </select>
                         </div>
                         <div data-for="hearabout" class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
                             <input type="text" name="entry.283285693" placeholder="How did you hear about us?" data-form-field="hearabout" class="form-control" value="" id="hearabout">
+                        </div>
+                        <div></div>
+                        <br /><br />
+                        <div style="font-size: 14pt"><span style="font-size: 16pt">We hope to see you in DataConf! </span><br /> If your company is interested in sponsoring DataConf, send us an email at <a href="mailto:info@dataconf.co.za">info@dataconf.co.za</a> or add contact details of a person responsible for it here: </div>
+                        <div data-for="sponsorcontact" class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
+                            <input type="text" name="entry.1419300714" placeholder="Contact details - sponsorship (optional)" data-form-field="sponsorcontact" class="form-control" value="" id="sponsorcontact">
                         </div>
                         <div class="col-auto mbr-section-btn align-center"><button type="submit" class="btn btn-primary display-4">Submit</button></div>
                     </div>
@@ -181,6 +186,7 @@
       var field2 = $("#email").val();
       var field3 = $("#interest").val();
       var field4 = $("#hearabout").val();
+      var field5 = $("#sponsorcontact").val();
     //   $('#thanks_register').attr("hidden",true)
     //   $('#error_submit').attr("hidden",true)
 
@@ -192,7 +198,8 @@
           "entry.2057184795": field1,
           "entry.1601730886": field2,
           "entry.514530171": field3,
-          "entry.283285693": field4
+          "entry.283285693": field4,
+          "entry.1419300714": field5
         },
         type: "POST",
         dataType: "xml",
