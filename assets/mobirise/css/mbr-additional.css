@@ -778,11 +778,11 @@ a {
 .cid-tMwvBdCnKJ .mbr-section-subtitle {
   color: #ffffff;
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .cid-tMwvBdCnKJ .card {
     max-width: 12.5%;
   }
-}
+} */
 .cid-tElP96Eeyl .social-row {
   text-align: center;
 }
