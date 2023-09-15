@@ -599,6 +599,14 @@ a:hover {
 .mbr-plan-header.bg-danger .mbr-plan-price-desc {
   color: #fef2e3;
 }
+
+.speakers div {
+  text-align: center;
+  font-size: 14pt;
+}
+.speakers div strong {
+  font-size: 16pt;
+}
 /* Scroll to top button*/
 .scrollToTop_wraper {
   display: none;
