@@ -579,6 +579,7 @@ a,
 a:hover {
   color: #f7931e;
 }
+
 .mbr-plan-header.bg-primary .mbr-plan-subtitle,
 .mbr-plan-header.bg-primary .mbr-plan-price-desc {
   color: #fef2e3;
@@ -1233,6 +1234,13 @@ a {
 .cid-sFGzrhlvIh .card-box {
   color: #ffffff;
   text-align: center;
+}
+
+.cid-tt2r08uOEf a {
+  color: black;
+}
+.cid-tt2r08uOEf a:hover {
+  color: #f7931e;
 }
 .cid-tt2r08uOEf {
   padding-top: 5rem;
