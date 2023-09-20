@@ -126,15 +126,15 @@ var modalData = [
 $(document).ready(function() {
   for (var i = 0; i < modalData.length; i++) {
     var first_name = modalData[i].name.split(' ')[0]
-    var modal = $("#speakerModal").clone(); // Clone the template
+    var modal = $("#speakerModal").clone(); 
     var speaker_html = "<h5>" + modalData[i].name + "</h5>" + modalData[i].bio 
-    modal.attr("id", "speakerModal" + first_name); // Set a unique ID for each modal
-    modal.find(".modal-img").html("<img src=\"assets/images/speaker_" + first_name.toLowerCase() + ".png\" />"); // Set the modal title
-    modal.find(".modal-title").text(modalData[i].title); // Set the modal title
-    modal.find(".modal-speaker-bio").html(speaker_html); // Set the modal content
-    modal.find(".modal-talk-content").html(modalData[i].talk); // Set the modal content
-    modal.find(".modal-speaker-name").html(modalData[i].name); // Set the modal content
-    modal.find(".modal-tracks").html("<strong> Categories: </strong>" + modalData[i].tracks); // Set the modal content
-    modal.appendTo("body"); // Append the modal to the body
+    modal.attr("id", "speakerModal" + first_name); 
+    modal.find(".modal-img").html("<img src=\"assets/images/speaker_" + first_name.toLowerCase() + ".png\" />"); 
+    modal.find(".modal-title").text(modalData[i].title); 
+    modal.find(".modal-speaker-bio").html(speaker_html); 
+    modal.find(".modal-talk-content").html(modalData[i].talk);
+    modal.find(".modal-speaker-name").html(modalData[i].name); 
+    modal.find(".modal-tracks").html("<strong> Categories: </strong>" + modalData[i].tracks); 
+    modal.appendTo("body"); 
   }
 });
