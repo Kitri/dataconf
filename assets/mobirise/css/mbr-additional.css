@@ -1253,12 +1253,14 @@ a {
   /* margin: 0 auto;
   width: 50%; */
 /* } */
-.cid-agenda td.speaker-img {
-  width:10%;
-  /* margin: 0; */
+.cid-agenda .agenda-table img {
+  width: 100%;
 }
-.cid-agenda td.speaker-text {
-  width: 40%;
+
+@media (max-width: 767px) {
+  .cid-agenda .agenda-table img {
+    width: 15%;
+  }
 }
 
 .cid-agenda .agenda-table .row {
