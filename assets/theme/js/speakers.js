@@ -104,7 +104,10 @@ var modalData = [
     name: "Bernard van Niekerk",
     title: "Riding the Storm: Thriving in Uncertainty as a Startup",
     talk: "What happens when the unexpected strikes in a world obsessed with planning and predictability? Using the journey of RadixTrie, a unique database startup, as a case study, this talk explores the often-overlooked advantages of embracing uncertainty and the unpredictable. Started on the brink of a pandemic, without significant capital or conventional business expertise, RadixTrie has defied the odds, turning challenges into opportunities. In 'Riding the Storm,' we'll delve into the power values, the role of passion over profits, and why sometimes not knowing what lies ahead can be your greatest asset.   ", 
-    bio: "",
+    bio: "Meet Bernard van Niekerk, the Managing Director of RadixTrie—a database startup that's defying the odds in an unpredictable world.\
+    <br/><br/>With over two decades of experience in the technology sector, including stints at Dimension Data and IBM Global Services (and some organisations we don't name in polite company), Bernard is a seasoned navigator of the dynamic tech landscape. His expertise spans various domains, including team leadership, business development and management, enterprise architecture, database administration and database security.\
+    <br/><br/>Influenced by leadership legends like John C. Maxwell, Richard Branson, and Simon Sinek, Bernard is fervent about business resilience, creating opportunities, and empowering his team through equalitarian principles. This people-first philosophy—family first, mutual accountability, and embracing mistakes as learning opportunities—has been pivotal in RadixTrie's success.\
+    <br/><br/>What's next for Bernard and RadixTrie? Well, they're in the planning stages of a global expansion. Intrigued? You should be.",
     tracks: "Managing data teams"
   },
   {
