@@ -1260,6 +1260,8 @@ a {
 @media (max-width: 767px) {
   .cid-agenda img {
     width: 15%;
+    max-width: 15%;
+    height: auto;
   }
 }
 
