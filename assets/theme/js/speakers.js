@@ -95,9 +95,13 @@ var modalData = [
   },  
   {
     name: "Rishal Hurbans",
-    title: "Generative AI APIs: Weird and wonderful applications",
+    title: "Adventures with Generative AI APIs",
     talk: "This talk explores useful and surprising real-world applications of generative AI APIs from our experience in integrating it into apps. Some examples include: Finding themes in a group's input during brainstorms and workshops, transforming unstructured data into a common consistent structure for aviation sites, and generating test data for quality assurance in development. This talk consists of more code walk-throughs and demonstrations, and less theory.",
-    bio: "Co-founder at Viszen. Author of Grokking AI Algorithms. Founder and organiser of the AI ZA meetup. A bit more about me here: https://rhurbans.com/about-rishal/. We've had some interesting, useful, and fun encounters while trying to leverage generative AI in our apps and products, and I think the learnings might be insightful to others.",
+    bio: "Rishal is a technology professional with over a decade experience in software product design and development for organisations in finance, health, agriculture, mining, and telecoms.\
+    <br/> He is co-founder of Viszen, a product incubator with software in remote productivity, aviation, fitness, and AI, used in over 180 countries by thousands of people. \
+    <br /> Rishal is the author of Grokking Artificial Intelligence Algorithms, a book aimed at equipping developers with the intuition and practical tools for developing intelligent software. \
+    <br /> His passions are teaching, learning, product design, and creating with a mix of mediums, disciplines, and technologies. \
+    <br />https://rhurbans.com/",
     tracks: "Machine Learning Engineering, Data Visualisation, Other"
   },  
   {
