@@ -9,9 +9,9 @@ var modalData = [
   {
       name: "Jade Abbott",
       bio: "Jade Abbott is the co-founder and COO of Lelapa AI and co-founder of Masakhane, the grassroots organisation driving NLP research in African languages, for Africans, by Africans. She has 10 years experience building and professionalising AI in industry working across banking to NGOs to startups. Aside from her inspiring career she holds an MSc and was recently one of South Africa’s Inspiring Fifty 2020 and Mail&Guardian Top 200 Young South Africans 2021.",
-      title: "TBC",
-      talk: "Coming Soon",
-      tracks: ""
+      title: "You don't need AI; you need to know what your data is",
+      talk: "An insightful discussion based on real-world experiences. Exploring the challenges of recommending AI solutions before establishing a solid foundation of data understanding and robust data pipelines. This talk sheds light on the common pitfalls in AI and machine learning projects.",
+      tracks: "Data Engineering, AI, Machine Learning, Data Management"
   },
   {
       name: "Austin Poulton",
