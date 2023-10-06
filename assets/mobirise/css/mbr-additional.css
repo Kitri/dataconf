@@ -768,11 +768,14 @@ a {
   background-color: #232323;
 }
 .cid-tMwvBdCnKJ .platinum img {
-      width: 350px;
+      width: 400px;
 }
 
 .cid-tMwvBdCnKJ .gold img {
-  width: 170px;
+  width: 200px;
+}
+.cid-tMwvBdCnKJ .media img {
+      width: 250px;
 }
 
 .cid-tMwvBdCnKJ img {
@@ -792,6 +795,10 @@ a {
 }
 .cid-tMwvBdCnKJ .mbr-section-subtitle {
   color: #ffffff;
+}
+
+.cid-tMwvBdCnKJ .green {
+  color: #76ab2f;
 }
 /* @media (min-width: 992px) {
   .cid-tMwvBdCnKJ .card {
