@@ -7,6 +7,17 @@ var modalData = [
         tracks: "Data Engineering, Data Science, Machine Learning Engineering, Data Ops"
   },
   {
+    name: "Tobias Brandt",
+    bio:"Tobias is a PRQL Core Contributor and an experienced professional in data science and data engineering with 20 years of experience in quantitative finance. He currently leads teams responsible for portfolio analytics, systems, and data at Argon Asset Management in Cape Town. Tobias has previously presented at industry conferences such as Subsurface Live and PyconZA.",
+    title: "PRQL - Modern, functional data transformations with the Pipelined Relational Query Language",
+    talk: "The past 50 years have seen a great evolution in programming languages — except in the world of databases. There, SQL still reigns supreme; but is it a shark, enduring due to its perfection, or a dinosaur, one impact away from extinction? \
+    <br /><br />We argue that SQL is an amalgamation of both: relational algebra — the shark; and the language — the bloated dinosaur.\
+    <br /><br />PRQL incorporates the beauty of relational algebra while also embracing the best from libraries like dplyr, Pandas, Polars, Kusto, Ecto, and LINQ to name just a few. It is a functional, pipelined query language with modern ergonomics and expressivity that transpiles to SQL, making it usable on any relational database. PRQL is open source, contributor-driven, and committed to staying that way forever.\
+     <br /><br />   This talk will describe the philosophy behind PRQL, using interactive examples to demonstrate its elegance and productivity as a language for data.\
+    <br /><br />   Join us and learn about the latest evolution in query languages!",
+    tracks: "Data Engineering"
+  },
+  {
       name: "Jade Abbott",
       bio: "Jade Abbott is the co-founder and COO of Lelapa AI and co-founder of Masakhane, the grassroots organisation driving NLP research in African languages, for Africans, by Africans. She has 10 years experience building and professionalising AI in industry working across banking to NGOs to startups. Aside from her inspiring career she holds an MSc and was recently one of South Africa’s Inspiring Fifty 2020 and Mail&Guardian Top 200 Young South Africans 2021.",
       title: "You don't need AI; you need to know what your data is",
