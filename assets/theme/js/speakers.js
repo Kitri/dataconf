@@ -1,4 +1,14 @@
 var modalData = [
+{
+    name: "James McGillivray",
+    bio: "James McGillivray, Data Management and Analytics MCSE, has been working in Business Intelligence for over a decade. He spends his working hours building solutions that allow people to make informed decisions. quickly and accurately. He is a Director at South African Data Consultancy, Cobalt Analytics.\
+\
+Before his career in data, James was an avid musical theatre student and musician. This love for performance has developed into a passion for developing and delivering presentations that are informative and enjoyable. James speaks frequently at Data Community Events, and has presented at some of the most well-known Data Events around the globe, including PASS Summit, SQL Bits and the Power BI World Tour.",
+    title: "The value of community in a fast-evolving landscape",
+    talk: "There’s too much happening for you to keep up with everything at a deep level. Having a community gives you enough chances to see things at a surface level, and enough people to turn to when the going gets tough.",
+    tracks: "Other",
+    is_keynote: true
+},
   {
     name: "Brittany Wagenaar",
     bio: "Hi, I'm Brittany, a recent Data Scientist turned Data Science Manager. In my experience I've been lucky enough to work on projects that have delivered great value, and I've been equally as lucky to learn from the projects that never quite took flight. I've learned that delivering successful Data Science projects requires thinking of our projects at products, and keeping our stakeholders close and excited throughout our process. ",
@@ -104,15 +114,6 @@ My talk will focus on my experience designing programmes that develop junior dat
 - Balancing technical and soft skills: While technical skills are crucial for data professionals, being a successful team member requires a lot of soft skills. How do we strike a balance between technical development and personal growth and emphasise the value of both?\
 - It takes a village: Starting a career can be an overwhelming experience, but success is more likely when supported by a community of relatable peers. How can we foster such communities to support junior professionals on their journey and help them build their professional network at the same time?",
     tracks: "Managing data teams, Other"
-},
-{
-    name: "James McGillivray",
-    bio: "James McGillivray, Data Management and Analytics MCSE, has been working in Business Intelligence for over a decade. He spends his working hours building solutions that allow people to make informed decisions. quickly and accurately. He is a Director at South African Data Consultancy, Cobalt Analytics.\
-\
-Before his career in data, James was an avid musical theatre student and musician. This love for performance has developed into a passion for developing and delivering presentations that are informative and enjoyable. James speaks frequently at Data Community Events, and has presented at some of the most well-known Data Events around the globe, including PASS Summit, SQL Bits and the Power BI World Tour.",
-    title: "The value of community in a fast-evolving landscape",
-    talk: "There’s too much happening for you to keep up with everything at a deep level. Having a community gives you enough chances to see things at a surface level, and enough people to turn to when the going gets tough.",
-    tracks: "Other"
 }
 ];
 
