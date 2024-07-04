@@ -1,144 +1,119 @@
 var modalData = [
   {
-        name: "Greg Duckworth",
-        bio: "I'm a  Data Scientist with 11 years' experience in the Data Industry over a range of industries such as insurance, marketing, sales forecasting, statistical optimisation, public relations, and Ed-Tech. I'm also active in the research industry, having completed my PhD in applied statistics from UCT (2018), as well as publishing 14 papers in peer-reviewed international academic journals all within the sphere of applied statistics. During my PhD I lectured and tutored statistics to first and second year students, so I am familiar with presenting technical concepts to technical audiences. Furthermore, I was invited to present my PhD research at three international conferences, hosted in the USA, Morocco, and the UK. Currently, I am a Principal Data Science Consultant at Daemon, and am a senior leader in the South African contingent of the company. ",
-        title: "An introduction to Machine Learning Operations (MLOps)",
-        talk: "In this talk, I introduce the topic of MLOps (machine learning operations), and expand on what it is, why is it needed, and why it (as a distinct field) has grown in popularity over the last 5 or so years. I then go into detail about what processes and capabilities a good MLOps solutions should entail, and the typical tech stack used to address and enable these. Lastly, I present a working MLOps solution that we (at Daemon) have developed in AWS, and run through a standard ML problem to showcase how MLOps can be used to speed up ML development time. Attendees of this talk should come away with knowledge around what MLOps is, why it is needed, and an idea of how it can be implemented. ",
-        tracks: "Data Engineering, Data Science, Machine Learning Engineering, Data Ops"
-  },
-  {
-    name: "Tobias Brandt",
-    bio:"Tobias is a PRQL Core Contributor and an experienced professional in data science and data engineering with 20 years of experience in quantitative finance. He currently leads teams responsible for portfolio analytics, systems, and data at Argon Asset Management in Cape Town. Tobias has previously presented at industry conferences such as Subsurface Live and PyconZA.",
-    title: "PRQL - Modern, functional data transformations with the Pipelined Relational Query Language",
-    talk: "The past 50 years have seen a great evolution in programming languages — except in the world of databases. There, SQL still reigns supreme; but is it a shark, enduring due to its perfection, or a dinosaur, one impact away from extinction? \
-    <br /><br />We argue that SQL is an amalgamation of both: relational algebra — the shark; and the language — the bloated dinosaur.\
-    <br /><br />PRQL incorporates the beauty of relational algebra while also embracing the best from libraries like dplyr, Pandas, Polars, Kusto, Ecto, and LINQ to name just a few. It is a functional, pipelined query language with modern ergonomics and expressivity that transpiles to SQL, making it usable on any relational database. PRQL is open source, contributor-driven, and committed to staying that way forever.\
-     <br /><br />   This talk will describe the philosophy behind PRQL, using interactive examples to demonstrate its elegance and productivity as a language for data.\
-    <br /><br />   Join us and learn about the latest evolution in query languages!",
-    tracks: "Data Engineering"
-  },
-  {
-      name: "Jade Abbott",
-      bio: "Jade Abbott is the co-founder and COO of Lelapa AI and co-founder of Masakhane, the grassroots organisation driving NLP research in African languages, for Africans, by Africans. She has 10 years experience building and professionalising AI in industry working across banking to NGOs to startups. Aside from her inspiring career she holds an MSc and was recently one of South Africa’s Inspiring Fifty 2020 and Mail&Guardian Top 200 Young South Africans 2021.",
-      title: "You don't need AI; you need to know what your data is",
-      talk: "An insightful discussion based on real-world experiences. Exploring the challenges of recommending AI solutions before establishing a solid foundation of data understanding and robust data pipelines. This talk sheds light on the common pitfalls in AI and machine learning projects.",
-      tracks: "Data Engineering, AI, Machine Learning, Data Management"
-  },
-  {
-      name: "Austin Poulton",
-      title: "Cut adrift -  practical MLOps buoys",
-      talk: "Your cherished live serving model’s performance has been degrading steadily for weeks and you are seeing similar effects in the challenger model.   Why is this happening and how to correct it is not clear. \
-      <br /><br />There are a host of reasons why machine learning models go can and do sideways.  In this session I'll use, sometimes embarrassing, anecdotes and examples from past experience to describe data and concept drift for ML applications.  We’ll cover techniques and tools for detecting the various guises of drift and how to respond.   We’ll take a lightweight approach, using MLops principles, sprinkled with a dash of new and emerging open source tools and libraries.  ",
-      bio: "I have software engineering and quantitative background and have worked in data science and engineering roles for the last 10+ years.  I returned to Cape Town from London in 2022 to lead the Equal Experts South Africa's data practice.",
-      tracks: "Data Engineering, Data Science"
-  },
-  {
-      name: "Ewald Horn",
-      title: "Data army of one - Unconventional tools to conquer data challenges",
-      talk: "Everyone knows that Python, Julia and R are the tools you need to do data work. What happens when none of those are an option though? How can you still deliver the results business needs? What about unconventional technologies? Does thinking outside the conventional box hold any promise? \
-      <br/><br/>On a recent project, I was challenged to find ways to visualise data, but, I was not able to use the traditional tools. After trying out D3, I realised I needed even finer control over what was happening and had to find a better way forward. Throw in the complication of needing a web and desktop application, plus potentially mobile somewhere down the road, and things looked a bit bleak. \
-      <br/><br/>Yet, I found a surprising answer, one that allowed me to meet all the project requirements and deliver real business value. Best of all, I could share code between the different environments and deliver results quickly. \
-      <br/><br/>In my talk, I will show how using tooling not normally associated with the data world can help solve data challenges and open up new possibilities", 
-      bio: "I solve esoteric problems for unconventional people and love using the wrong technology to do the right thing. Sure, it's often whacky and tacky, but in business, that's sometimes all that's needed.  Sharing my experiences is a passion and I love helping people move off the beaten path and find different ways of overcoming challenges.  \
-      <br /><br />Plus, I'm a consultant and we all know consultants know everything. So there's that.",
-      tracks: "Data Engineering, Business Intelligence, Data Visualisation"
-  },
-  {
-    name: "Gordon Inggs",
-    title: "How to do everything right and still fail - a story from the data engineering frontlines at the City of Cape Town",
-    talk: "The caricature of an engineer is a socially maladjusted nerd who prefers solving technical problems than having to interact with people. This story is mostly a lie, since engineers almost always have to work with large teams of people to get anything done. However, all stories have a basis in truth, and the truth is that we do sometimes get the people stuff wrong. \
-    <br/><br/>I will use an example from my work in the Data Science branch at the City of Cape Town as a cautionary tale of \"getting the people stuff wrong\". The story relates to data infrastructure we have developed and deployed relating to information about loadshedding in the City of Cape Town. \
-    <br/><br/>Earlier this year, in a ridiculously short amount of time, we automated the workflow around updating the Ciy's loadshedding schedule, and removed considerable risk of residents being misinformed. We went from a method of updating the schedule that involved many, redudant people from different departments, semiofficial WhatsApp groups and magic spreadsheets, to a world that looked like best practice - only the one or two people needed involved, serverless infrastructure, exposing useful data in machine readable format. I would spend a little time describing what we built since I think it would be of technical interest to the audience, and I'm proud of it.\
-    <br/><br/>However, the roll out has not been smooth. I will spend the rest of the talk describing where and when in the process we missed opportunities to engage critical stakeholders, their perspectives, and have conversations that needed to be had. I will also spend some time casting a more charitable light on the \"old\" way of doing things, talking about the value of social relationships and feedback loops. \
-    <br/><br/>While the project has not been a failure by any stretch of the imagination, it could have been better, and this talk will be my opportunity to get this off my chest!",
-    bio: "Dr. Gordon Inggs is a Principal Data Engineer at the City of Cape Town, known for working on large, complex socio-technical systems. Raised among the penguins of Simon's Town, he completed his undergraduate and Masters in Electrical Engineering at the University of Cape Town in 2011, followed by a Ph.D. in Computer Engineering at Imperial College London, focusing on heterogeneous systems, which was awarded in 2016. After his PhD, he returned to Cape Town to work for AWS in 2016. He worked on the EC2 product, contributing to some of the largest computing systems on the planet. In 2018, he joined the City of Cape Town, initially as the city's second data scientist. However, in 2021, he recognised his true calling, data engineering, and transitioned to that role, dedicating himself to practical data solutions for the City's residents. Dr Inggs has a unique combination of advanced technical knowledge, combined with deep understanding of the social contexts within which these technologies might play a role.",
-    tracks: "Data Engineering, Data Science, Business Intelligence, Data governance, security and privacy, Other"
-  },
-
-  {
-    name: "Guillaume Belrose",
-    title: "TDD for Data Engineering",
-    talk: "Many practices known to deliver improved outcomes in software delivery (for example test automation, CI / CD, agile methods) can also be successfully applied to Data Engineering. \
-    <br/><br/>Focusing on testing, my presentation will highlight the benefits of applying Test Driven Development techniques to data transformations. This can prove extremely useful when writing logic to cater for non trivial business or technical requirements. TDD also acts as a guide to design data transformations that are more decoupled and easier to test. \
-    <br/><br/>I will provide examples written with DBT where the tests and the transformation logic is written entirely in SQL. But the concepts are applicable to other data stacks.",
-    bio: "I have over 20 years of experience working as a Software and Operations Engineer and I have recently switched to Data Engineering, so I am far from an expert in that field. However, I strongly believe that common principles applied to code used for software, infrastructure or data can lead to good quality. And certainly, from a Data Engineer newbie's perspective, TDD offers a ton of benefits. ",
-    tracks: "Data Engineering"
-  },
-  {
-    name: "Jody Roberts",
-    title: "Modern Data Management",
-    talk: "The intricate world of data can easily become daunting. It does not exist on any linear plane, nor does it adhere to any formal structural parameters. Within the vast universe of what data may represent, there lies an organic & progressive universe of opportunity. Let's explore your data together and unlock opportunities for your business.",
-    bio: "Jody Roberts is a technology entrepreneur who is passionate about solving social problems with the help of technology. He has over 20 years experience in the IT industry with deep specialization in data management across various platforms. He has received the Microsoft MVP award for data platforms for the last decade and continues to play a critical role in the building of technology communities across Africa and mentoring young professionals. \
-    <br/><br/>When he is not solving real world problems, he spends his free time doing CrossFit or mountain biking.",
-    tracks: "Data governance, Security and privacy"
-  },  
-  {
-    name: "Janine Lodewick",
-    title: "Could I store data in my closet?",
-    talk: "A journey through the various data storage architectures, over time, starting at databases, through warehouses, data lakes, cloud services and finally extra focus on Distributed Data Meshes.  The presentation contains analogies to closets which will help junior data engineers get a clearer understanding on how data is categorized and stored.",
-    bio: "After many years in the software development space, data captured my heart and took me on a new exciting journey into data storage, analysis and visualizations.",
-    tracks: "Data Engineering"
-  },
-  {
-    name: "Johanna Thathaisa",
-    title: "Unveiling the Illusion: Navigating the Pitfalls of Low-Code Data Tools for Non-Specialists",
-    talk: "Accessible tech has significantly altered the data sphere through the integration of low-code tools. However, despite offering accessibility through simple interfaces, leveraging complex algorithms employed by these tools can prove challenging even for seasoned professionals within respective fields. Entranced by the fascinating charm of these data instruments with riches beyond your wildest imagination - prepare yourself for the unsettling risks and consequences they harbor. Unravel the mystery around non-experts' belief they've acquired adequate data engineering and visualization skills; get insights into genuine hazards resulting from half-baked solutions; discover the far-reaching implication of this phenomenon on organizations in years to come. Let's dive deep into real-world examples (case studies), explore ways to differentiate profound experience/knowledge from superficial training (skills), and gain valuable insight on how to harmoniously integrate domain authority with prevention of mistakes/obstacles. This presentation anticipates benefiting individuals with varied occupations or interests - including data experts, executives, and tech fans alike - by furnishing them with knowledge on how to arrive at educated choices and construct a durable data-focused fate.",
-    bio: "As an accomplished data professional with technical acumen, practical experience, and a gift for communication, I am uniquely positioned to shed light on the allure and dangers of low-code data tools. My insights, coupled with real-world examples, will empower your audience to discern genuine expertise from superficial skills, enabling them to make smarter data-driven decisions and avoid future complications. ",
-    tracks: "Data Engineering, Data Science, Business Intelligence, Data governance, security and privacy, Managing data teams, Other"
-  },
-  {
-    name: "Michael Johnson",
-    title: "Diving into Delta Lake",
-    talk: "Delta Lake is a file-based, open-source storage format that works created by the inventors of Apache Spark to enable reliable and scalable data analytics. Delta Lake supports ACID transactions, schema evolution, upserts, time travel, and more. Delta Lake can improve data quality, performance, governance, and discovery for both batch and streaming workloads.\
-    <br/><br/>Using Delta Lake files in analytics can offer many benefits, such as:\
-    <ul>\
-    <li>Improving data quality and reliability by ensuring data integrity, consistency, and accuracy across different sources and formats.</li>\
-    <li>Enabling faster and easier data ingestion, transformation, and analysis by leveraging Spark’s distributed processing power and Delta Lake’s optimized storage layer.</li>\
-    <li>Supporting both batch and streaming workloads on the same data with high performance and low latency.</li>\
-    <li>Enhancing data governance and security by enabling audit trails, access control, encryption, and compliance features.</li>\
-    <li>Facilitating data discovery and exploration by providing rich metadata, schema enforcement, and time travel capabilities.</li>\
-        </ul> \
-    Join this session to find out how why Delta Lake is the preferred storage layer for both Databricks and Microsoft Fabric any why you should be using it too.  ",
-    bio: "Michael Johnson is a Business intelligence architect, Microsoft Data Platform MVP and international speaker. After graduating from the University of Johannesburg with an honours degree in Informatics in 2005 he went on to work as an application developer at one of the big 4 banks in South Africa, it was there that he discovered his love of data. In 2011 Michael changed roles and became a business intelligence consultant, in this role he has completed projects at many of the large banks in the country.\
-    <br/><br/>In addition to working as a business intelligence consultant Michael also leads the Johannesburg SQL User Group which holds monthly meeting discussing variety of issues relating the SQL Server platform. He also hosts an annual conference called SQL Saturday the attracts speakers from all over the world and attracts over 250 local attendees.\
-    <br/><br/>Michael has spoken at many both locally and internationally, most recently in the UK, Canada and the United States of America. He also presents at non- SQL related conferences including satRday and Devconf. It is for these activities that Michael was recognised as a Data Platform MVP by Microsoft in 2017.  ",
-    tracks: "Data Engineering"
-  },  
-  {
-    name: "Rishal Hurbans",
-    title: "Adventures with Generative AI APIs",
-    talk: "This talk explores useful and surprising real-world applications of generative AI APIs from our experience in integrating it into apps. Some examples include: Finding themes in a group's input during brainstorms and workshops, transforming unstructured data into a common consistent structure for aviation sites, and generating test data for quality assurance in development. This talk consists of more code walk-throughs and demonstrations, and less theory.",
-    bio: "Rishal is a technology professional with over a decade experience in software product design and development for organisations in finance, health, agriculture, mining, and telecoms.\
-    <br/> He is co-founder of Viszen, a product incubator with software in remote productivity, aviation, fitness, and AI, used in over 180 countries by thousands of people. \
-    <br /> Rishal is the author of Grokking Artificial Intelligence Algorithms, a book aimed at equipping developers with the intuition and practical tools for developing intelligent software. \
-    <br /> His passions are teaching, learning, product design, and creating with a mix of mediums, disciplines, and technologies. \
-    <br />https://rhurbans.com/",
-    tracks: "Machine Learning Engineering, Data Visualisation, Other"
-  },  
-  {
-    name: "Bernard van Niekerk",
-    title: "Riding the Storm: Thriving in Uncertainty as a Startup",
-    talk: "What happens when the unexpected strikes in a world obsessed with planning and predictability? Using the journey of RadixTrie, a unique database startup, as a case study, this talk explores the often-overlooked advantages of embracing uncertainty and the unpredictable. Started on the brink of a pandemic, without significant capital or conventional business expertise, RadixTrie has defied the odds, turning challenges into opportunities. In 'Riding the Storm,' we'll delve into the power values, the role of passion over profits, and why sometimes not knowing what lies ahead can be your greatest asset.   ", 
-    bio: "Meet Bernard van Niekerk, the Managing Director of RadixTrie—a database startup that's defying the odds in an unpredictable world.\
-    <br/><br/>With over two decades of experience in the technology sector, including stints at Dimension Data and IBM Global Services (and some organisations we don't name in polite company), Bernard is a seasoned navigator of the dynamic tech landscape. His expertise spans various domains, including team leadership, business development and management, enterprise architecture, database administration and database security.\
-    <br/><br/>Influenced by leadership legends like John C. Maxwell, Richard Branson, and Simon Sinek, Bernard is fervent about business resilience, creating opportunities, and empowering his team through equalitarian principles. This people-first philosophy—family first, mutual accountability, and embracing mistakes as learning opportunities—has been pivotal in RadixTrie's success.\
-    <br/><br/>What's next for Bernard and RadixTrie? Well, they're in the planning stages of a global expansion. Intrigued? You should be.",
-    tracks: "Managing data teams"
-  },
-  {
-    name: "Jonathan Gerrand",
-    title: "\"Where'd my facts go!?\" - Navigating the Development Journey of a Knowledge-Augmented Large Language Model Application at Company Scale",
-    talk: "The world is currently being pushed to ever greater hights on the generative AI hype-cycle, with the unending promises of Large Language Models (LLMs) being ubiquitous in the media. However, the reality of developing and deploying these systems is far from a seamless experience. \
-    <br/><br/>In my upcoming talk, I'll be sharing my personal journey of developing an internal LLM application used to access disparate knowledge stores at ExploreAI. I'll take you through the highs and lows, the challenges faced, and the innovative solutions arrived at to enable knowledge-based searches, specifically Retrieval Augmented Generation, at our institution.\
-    <br/><br/>Together we'll dive deep into the world of data extraction from source documents and systems, and I'll share why I believe data ownership and robust metadata management are so crucial. I'll show you how these elements not only helped shape the functionality of our LLM application but also affected its efficiency and effectiveness.\
-    <br/><br/>We'll also chat about the importance of enhancing observability from an end-user perspective. Here I'll share some insights into how this can improve user experience and make the application's use far more intuitive. Weaving this all together will be a collection of demos showcasing the LLM application's knowledge metadata management capabilities and the user experience enhancements achieved through increased observability.\
-    <br/><br/>While there will be many interesting facets to my talk, I ultimately would like people to leave the session grappling with question of how entire ecosystems supporting LLMs, and not only the AI itself, need to be developed in order our projects are to yield true value.", 
-    bio: "I'm a data scientist and researcher who believes in the power that artificial intelligence and its related fields can bring for social good - and how creatively, these technologies can change our future. I feel that my studies and work experience have fostered within me a pursuit for excellence, and a critical curiosity for the world around me. My intrinsic beliefs push me to share my knowledge with others, to uplift the society which has raised me.",
+    name: "Brittany Wagenaar",
+    bio: "Hi, I'm Brittany, a recent Data Scientist turned Data Science Manager. In my experience I've been lucky enough to work on projects that have delivered great value, and I've been equally as lucky to learn from the projects that never quite took flight. I've learned that delivering successful Data Science projects requires thinking of our projects at products, and keeping our stakeholders close and excited throughout our process. ",
+    title: "Creating Data Science impact at scale",
+    talk: "In the fast-paced world of data science, the allure often lies in developing cutting-edge machine learning algorithms and uncovering hidden patterns in data. However, the true value of data science is realised not just through innovative models, but through their successful integration into business and operational processes. This talk sheds light on an often-overlooked aspect of data science: the crucial role of understanding data beyond what is seen in the database and instead focusing on the people, teams and processes that underpin it.",
     tracks: "Data Science"
-  }
-    
-
-
+},
+{
+    name: "Dale Nunns",
+    bio: "I built a talking duck!  \
+          \
+          I'm a frequent speaker at BSides Cape Town and DevConf. \
+          \
+          I’ve been professionally developing software since 2000. I’m comfortable in multiple development environments and platforms and have worked on everything from big data distributed systems and large retail in-store and stock-take systems written in .NET to Linux kernel drivers and code running on 8-bit micro-controllers.",
+    title: "I can see clearly now - Adding vision to a rubber duck",
+    talk: "Adding better vision capabilities to my AI Robot Rubber Duck, Miss Duckworth. \
+\
+Miss Duckworth is a large 3D printed duck that is capable of having discussions with you and runs all of the AI models locally without internet access. \
+\
+Using machine learning, various image recognition libraries and multimodal AI models I want to add basic vision capabilities to the duck. \
+\
+Be able to ask it questions about what it 'sees' and have the duck answer back. Have the duck recognise people and try have conversations with them. \
+\
+This talk covers how I got this to work, if it works, and all the tools and libraries required to do image processing offline using low powered computers without GPU's etc.",
+    tracks: "Machine Learning Engineering, Data Visualisation, Other"
+},
+{
+    name: "Elisha Bere",
+    bio: "As a seasoned full-stack software developer with six years of experience, my expertise spans across multiple domains, including AI and cybersecurity. My deep passion for these fields, coupled with extensive hands-on experience utilizing Python, positions me as an ideal candidate to deliver this talk. I have a proven track record of leveraging cutting-edge technologies, such as Language Models (LLMs) and Retrieval Augmented Generation (RAG) systems, to develop innovative solutions in healthcare and beyond. My unique blend of technical proficiency, practical experience, and enthusiasm for advancing the intersection of AI and healthcare equips me to offer valuable insights and actionable strategies to the audience.",
+    title: "Accelerating Medical Insight: Harnessing Retrieval Augmented Generation (RAG) Systems and LLM's ",
+    talk: "In this talk, we explore how Language Model (LLM) technology coupled with Retrieval Augmented Generation (RAG) systems revolutionizes healthcare by facilitating swift access to academic studies and diagnostic information. By employing these advanced AI tools, doctors can efficiently recap pertinent research findings and diagnoses, expediting the diagnostic process. This innovative approach enhances medical decision-making, streamlines patient care, and ultimately improves health outcomes. We delve into practical applications, discussing how LLMs and RAG systems empower healthcare professionals to navigate vast repositories of medical knowledge effortlessly. Emphasizing the transformative potential of these technologies, we envision a future where rapid access to critical information becomes synonymous with superior patient care.",
+    tracks: "Other"
+},
+{
+    name: "Garett Sidwell",
+    bio: "Garett is a Data Scientist in Heineken's Africa and Middle East Analytics Hub, where he focuses on deploying AI solutions across multiple countries. He has also leveraged his knowledge gained from his master’s degree to contribute to use cases in global financial forecasting.",
+    title: "Heinekens MLOps Journey: From notebooks to scalable products",
+    talk: "Join us to discover how Heineken’s Africa and Middle East Analytics Hub transformed its approach to data and AI solutions, improving collaboration, code quality, and project delivery cadence. \
+\
+We will be discussing: \
+\
+How we addressed siloed operations and lack of standardisation in our processes\
+The development of a framework to address these issues\
+The benefits realised by the adoption of this framework\
+How we see the framework evolving in the future",
+    tracks: "Data Science, Managing data teams, Other"
+},
+{
+    name: "Georgina Armstrong",
+    bio: "Georgina has been working in Data Science since 2011. For many years she was a coding data scientist in R, Python and PySpark, but for the last 5 years she's been in leadership. She's been a manager through several hiring and layoff cycles in different companies and industries, and now she is Head of Data for a listed company in the United States. She's figured out how to keep some very different teams happy, productive and collaborative in Data Science, Data Engineering and Advanced Analytics disciplines. She definitely learned some stuff the hard way, and wants to pass that on so that other people don't have to.",
+    title: "Managing Multinational Data teams.",
+    talk: "I been managing a team of six data scientists, engineers and analysts, spanning four countries and six nationalities for two years. Here is what I have learned.",
+    tracks: "Managing data teams"
+},
+{
+    name: "Guillaume (G) Belrose",
+    bio: "I am a Data Engineer with Equal Experts, based in Johannesburg. I've worked for over 20 years in Operations and Sofware Engineering and recently moved to the very dynamic world of Data.\
+\
+As Einstein might have said, the definition of insanity is re-publishing the same Tableau dashboard over and over again and expecting a different outcome. I have done plenty of that lately and I have some learnings to share. ",
+    title: "Applying engineering principles to reporting",
+    talk: "In many companies, business level reporting is used to drive executive decisions. More often than not, not enough attention is paid to how those reports are built, maintained, made performant and resilient to change. \
+\
+In this session, I will talk about my team's experiences in bringing engineering principles normally applied to data pipelines all the way to the reporting layer (specifically Tableau).\
+\
+Using existing APIs, we are able to do interesting things.\
+\
+Fist, discover how far the reporting landscape go (how big is the bus factor) so we can refactor reports in line with software engineering practices. \
+\
+Second, treat reporting as artefacts that we can manage by an automated pipeline (a la CI/ CD).\
+\
+Third, expand data quality checks to the reporting layer so our business consumers can be notified of quality issues as soon as they occur. \
+\
+And last but not least, bring the computation of business metrics back to the database.",
+    tracks: "Data Engineering, Business Intelligence"
+},
+ {
+    name: "Kabelo Masemola",
+    bio: "I serve as the Chief data and Analytics officer at Moniepoint (Africa's fastest growing fintech), and have years of experience designing data strategies and have dabbled in building machine learning models that are currently running in production systems",
+    title: "a practical approach to federated data governance strategies",
+    talk: "The talk will be taking the audience through data governance strategy implementation with a specific view of data mesh supported governance. We will also discuss how this approach drives innovation",
+    tracks: "Data governance, security and privacy, Managing data teams, Data Ops"
+},
+ {
+    name: "Michael Johnson",
+    bio: "Michael Johnson is a Business Intelligence architect and Microsoft data platform MVP living in Johannesburg, South Africa. Michael has been working with data for the last 15 years and has run the local Data Platform User Group and SQL Saturday conference event for the last few years.\
+He enjoys showing people new tools and technologies that allow them to work more effectively with their data. ",
+    title: "5 types of databases in less than 40 minutes",
+    talk: "For over 40 years, the relational database has been the de facto database architecture used by organizations large and small to power their applications. more recently we have seen other alternatives emerge that could be better suited to the application requirements. This talk will look at 5 types of databases that may be better alternatives. ",
+    tracks: "Data Engineering"
+},
+{
+    name: "Zintle Faltein-Maqubela",
+    bio: "I head up intern and graduate development initiatives at Sand technologies. I am passionate about helping junior data professionals discover themselves and find their place in teams they land in. My role has given me insights on the value of having a strong technical foundation, emphasis on soft skills development, and providing mentorship opportunities.",
+    title: "Building strong foundations: Designing effective development programs for junior data talent",
+    talk: "We are all familiar with the challenge of being a new graduate struggling to secure a job due to the requirement for work experience. However, without someone willing to provide that initial opportunity, gaining the necessary experience remains elusive. In the data industry, this issue is further complicated by the various non-traditional paths students can take to acquire skills, such as bootcamps and online courses. While these avenues may equip students with technical knowledge, being an effective team member demands much more. So, how can those of us who work with junior talent design programmes that bridge this gap?\
+\
+My talk will focus on my experience designing programmes that develop junior data professionals into well-rounded individuals. I will explore the following key areas:\
+\
+- Design for the future: Today’s graduates will eventually become managers, and technical expertise alone does not create impactful and inspiring leaders. How can we start cultivating leadership qualities to prepare juniors for effectiveness in future roles?\
+- Recognising the unknown: New professionals often feel the need to overwork to prove their worth, adopting a jack-of-all-trades approach while mastering very little. Instead of pursuing multiple paths, how can we guide them towards a focused direction and refine their learning process?\
+- Learning how to learn: The data industry is constantly evolving, making continuous learning an essential skill. How can we equip graduates with future-proof skills that will form the foundation of their data careers?\
+- Developing professional skills remotely: Remote work removes the opportunity to learn by observing others in person. How can we still teach professional behaviour virtually?\
+- Balancing technical and soft skills: While technical skills are crucial for data professionals, being a successful team member requires a lot of soft skills. How do we strike a balance between technical development and personal growth and emphasise the value of both?\
+- It takes a village: Starting a career can be an overwhelming experience, but success is more likely when supported by a community of relatable peers. How can we foster such communities to support junior professionals on their journey and help them build their professional network at the same time?",
+    tracks: "Managing data teams, Other"
+},
+{
+    name: "James McGillivray",
+    bio: "James McGillivray, Data Management and Analytics MCSE, has been working in Business Intelligence for over a decade. He spends his working hours building solutions that allow people to make informed decisions. quickly and accurately. He is a Director at South African Data Consultancy, Cobalt Analytics.\
+\
+Before his career in data, James was an avid musical theatre student and musician. This love for performance has developed into a passion for developing and delivering presentations that are informative and enjoyable. James speaks frequently at Data Community Events, and has presented at some of the most well-known Data Events around the globe, including PASS Summit, SQL Bits and the Power BI World Tour.",
+    title: "The value of community in a fast-evolving landscape",
+    talk: "There’s too much happening for you to keep up with everything at a deep level. Having a community gives you enough chances to see things at a surface level, and enough people to turn to when the going gets tough.",
+    tracks: "Other"
+}
 ];
 
 $(document).ready(function() {
@@ -147,7 +122,7 @@ $(document).ready(function() {
     var modal = $("#speakerModal").clone(); 
     var speaker_html = "<h5>" + modalData[i].name + "</h5>" + modalData[i].bio 
     modal.attr("id", "speakerModal" + first_name); 
-    modal.find(".modal-img").html("<img src=\"assets/images/speaker_" + first_name.toLowerCase() + ".png\" />"); 
+    modal.find(".modal-img").html("<img src=\"assets/images/speakers_2024/speaker_" + first_name.toLowerCase() + ".jpg\" />"); 
     modal.find(".modal-title").text(modalData[i].title); 
     modal.find(".modal-speaker-bio").html(speaker_html); 
     modal.find(".modal-talk-content").html(modalData[i].talk);
