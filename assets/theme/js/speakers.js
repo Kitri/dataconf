@@ -79,7 +79,7 @@ As Einstein might have said, the definition of insanity is re-publishing the sam
 },
  {
     name: "Kabelo Masemola",
-    bio: "I serve as the Chief data and Analytics officer at Moniepoint (Africa's fastest growing fintech), and have years of experience designing data strategies and have dabbled in building machine learning models that are currently running in production systems",
+    bio: "I serve as the Co Founder at Maskab Data Systems, and have years of experience designing data strategies and have dabbled in building machine learning models that are currently running in production systems",
     title: "A practical approach to federated data governance strategies",
     talk: "The talk will be taking the audience through data governance strategy implementation with a specific view of data mesh supported governance. We will also discuss how this approach drives innovation",
     tracks: "Data governance, security and privacy, Managing data teams, Data Ops"
