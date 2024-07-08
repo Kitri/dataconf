@@ -55,9 +55,11 @@ Before his career in data, James was an avid musical theatre student and musicia
 },
 {
     name: "Georgina Armstrong",
-    bio: "Georgina has been working in Data Science since 2011. For many years she was a coding data scientist in R, Python and PySpark, but for the last 5 years she's been in leadership. She's been a manager through several hiring and layoff cycles in different companies and industries, and now she is Head of Data for a listed company in the United States. She's figured out how to keep some very different teams happy, productive and collaborative in Data Science, Data Engineering and Advanced Analytics disciplines. She definitely learned some stuff the hard way, and wants to pass that on so that other people don't have to.",
+    bio: "Georgina has been working in Data Science since 2011. For many years she was a coding data scientist in R, Python and PySpark, but for the last 5 years she's been in leadership. Now she is Head of Data for a listed company in the United States. She's figured out how to keep data teams happy, productive and collaborative, at least 80% of the time.",
     title: "Managing Multinational Data teams.",
-    talk: "I been managing a team of six data scientists, engineers and analysts, spanning four countries and six nationalities for two years. <br /><br />Here is what I have learned.",
+    talk: "I been managing remote, international data teams for 5 years. Keeping these diverse teams busy, happy and aligned with business is an art, and that's before you account for the cultural differences, spectrum of skills, and realities of remote work.\
+<br /> <br /> My teams were made up of PHDs and self-taught practitioners, Data Scientists, Analysts and Data Engineers, Norwegians, Lithuanians, South Africans, Spaniards and Americans. We went through hiring cycles and layoff cycles, major tech stack overhauls, massive data science projects and forensic audits.\
+<br /> <br /> I definitely learned some stuff the hard way, and now I've developed my own techniques to handle my teams - I'm sharing my operating system.",
     tracks: "Managing data teams"
 },
 {
