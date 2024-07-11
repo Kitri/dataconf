@@ -54,6 +54,14 @@ Before his career in data, James was an avid musical theatre student and musicia
     tracks: "Data Science, Managing data teams, Other"
 },
 {
+  name: "Gerhard van Deventer",
+  bio: "I am a data engineer with more than 20 years of experience in most industries, including commerce, manufacturing, finance, ITC and many more. I focus on solving data problems for companies where it often feels like there is no clear solution. Experience taught me many lessons that I’d like to share with my peers. ",
+  title: "Lessons Learned from Using an LLM and Expecting Magic",
+  talk: "LLMs can seem like a panacea, but labeling them as a silver bullet is a mistake. I'll share an example of how we used an LLM, what the client's expectations were, and how it fell short. I'll delve into the lessons learned from our unreasonable expectations and outline the criteria I'll use next time when considering an LLM.",
+  tracks: "Data Engineering, Managing data teams"
+
+},
+{
     name: "Georgina Armstrong",
     bio: "Georgina has been working in Data Science since 2011. For many years she was a coding data scientist in R, Python and PySpark, but for the last 5 years she's been in leadership. Now she is Head of Data for a listed company in the United States. She's figured out how to keep data teams happy, productive and collaborative, at least 80% of the time.",
     title: "Managing Multinational Data teams.",
