@@ -102,6 +102,15 @@ As Einstein might have said, the definition of insanity is re-publishing the sam
   <br /> This introduction highlights essential steps for a successful migration, focusing on discovery, business case development, readiness assessment, and leveraging Azure’s powerful services for migration.",
   tracks: "Data Engineering, Business Intelligence"
 },
+{
+  name:"Jonathan Bossenger",
+  bio: "Jonathan is a a developer educator from Cape Town, who is a passionate supporter and user of open-source software, with an interest in the communities behind it. Since 2022 he's been employed by Automattic as a sponsored contributor to the WordPress training team.",
+  title: "Open source data sucks - and how we learned to love it!",
+  talk: "In 2023 our team was tasked with making data informed decisions about our future goals and metrics, in order to better measure our value as paid volunteers to the very commercially focused business entity we're employed by.\
+ <br /> Up until that point, some of us had never even heard of KPIs, never mind considered how we should use data (or even that we could use data) to measure our impact and help define our decision making processes. \
+ <br /> In this talk I will review the highlights of this journey of discovery into what data we did (or didn't) have access to, where we found that data, who held the keys to it, how we used it to help inform our teams goals and metrics, as well as all the lessons we learned about data along the way. ",
+  tracks: "Data Engineering"
+},
  {
     name: "Kabelo Masemola",
     bio: "I serve as the Co Founder at Maskab Data Systems, and have years of experience designing data strategies and have dabbled in building machine learning models that are currently running in production systems",
