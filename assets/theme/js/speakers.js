@@ -87,6 +87,21 @@ As Einstein might have said, the definition of insanity is re-publishing the sam
 <br /> - And last but not least, bring the computation of business metrics back to the database.",
     tracks: "Data Engineering, Business Intelligence"
 },
+{
+  name: "Jody Roberts",
+  bio: "Jody Roberts is a technology entrepreneur who is passionate about solving social problems with the help of technology. He has over 20 years experience in the IT industry with deep specialization in data management across various platforms. He has received the Microsoft MVP award for data platforms for the last decade and continues to play a critical role in the building of technology communities across Africa and mentoring young professionals. \
+    <br/><br/>When he is not solving real world problems, he spends his free time doing CrossFit or mountain biking.",
+  title: "Revamp Your SQL Servers with Azure SQL Managed Instance",
+  talk: "Explore the simplest pathways to migrate from on-prem servers to an Azure SQL-managed instance. This session will guide you through optimizing operations and achieving cost efficiencies. Learn about alternatives and factors to consider when transferring your SQL Server databases to Azure SQL Managed Instance.\
+  <br /> \
+  <br /> Key topics include:\
+  <br /> <b>Discovery Phase</b>: Use Azure Migrate to understand your on-premises environment and tailor your migration journey.\
+  <br /> <b>Business Case</b>: Build a business case to see how Azure enhances your business value.\
+  <br /> <b>Assessmen</b>t: Evaluate readiness for migrating to Azure SQL targets.\
+  <br /> <b>Migration</b>: Utilize Azure Database Migration Service (DMS) for a smooth transition to Azure SQL.\
+  <br /> This introduction highlights essential steps for a successful migration, focusing on discovery, business case development, readiness assessment, and leveraging Azure’s powerful services for migration.",
+  tracks: "Data Engineering, Business Intelligence"
+},
  {
     name: "Kabelo Masemola",
     bio: "I serve as the Co Founder at Maskab Data Systems, and have years of experience designing data strategies and have dabbled in building machine learning models that are currently running in production systems",
