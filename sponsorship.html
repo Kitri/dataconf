@@ -1338,6 +1338,40 @@
         #package-builder .builder-main {
             width: 100%;
         }
+
+        /* Compact summary styles for mobile sticky nav */
+        #package-builder .summary-box.is-compact {
+            padding: 10px 15px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #package-builder .summary-box.is-compact > h3,
+        #package-builder .summary-box.is-compact #summary-content,
+        #package-builder .summary-box.is-compact #summary-benefits,
+        #package-builder .summary-box.is-compact #package-builder-cta,
+        #package-builder .summary-box.is-compact #addon-selection-prompt {
+            display: none;
+        }
+
+        #package-builder .summary-box.is-compact #summary-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        #package-builder .summary-box.is-compact #summary-total p {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        #package-builder .summary-box.is-compact #total-price {
+            font-size: 1.6rem;
+        }
     }
 
   </style>
@@ -2944,6 +2978,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const mailtoLink = `mailto:info@dataconf.co.za?subject=${encodeURIComponent('Custom DataConf Sponsorship Package Inquiry')}&body=${encodeURIComponent(emailBody)}`;
         window.location.href = mailtoLink;
     });
+
+    // Mobile compact summary logic
+    const packageBuilder = document.getElementById('package-builder');
+    const summaryBox = document.querySelector('#package-builder .summary-box');
+    const builderMain = document.querySelector('#package-builder .builder-main');
+
+    if (packageBuilder && summaryBox && builderMain) {
+        const handleScroll = () => {
+            if (window.innerWidth < 992) { // Only on mobile
+                const builderRect = builderMain.getBoundingClientRect();
+                const stickyTopPosition = 70; // Matches the CSS top value
+                
+                // Add a buffer to prevent it from becoming compact too early or un-compacting too late
+                const buffer = 50; 
+                
+                const isScrollingInBuilder = builderRect.top < stickyTopPosition && builderRect.bottom > (stickyTopPosition + summaryBox.offsetHeight + buffer);
+
+                if (isScrollingInBuilder) {
+                    summaryBox.classList.add('is-compact');
+                } else {
+                    summaryBox.classList.remove('is-compact');
+                }
+            } else {
+                // Always remove for desktop view
+                summaryBox.classList.remove('is-compact');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', handleScroll);
+    }
 });
 </script>
   
