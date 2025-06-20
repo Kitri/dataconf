@@ -2987,15 +2987,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (packageBuilder && summaryBox && builderMain) {
         const handleScroll = () => {
             if (window.innerWidth < 992) { // Only on mobile
-                const builderRect = builderMain.getBoundingClientRect();
-                const stickyTopPosition = 70; // Matches the CSS top value
-                
-                // Add a buffer to prevent it from becoming compact too early or un-compacting too late
-                const buffer = 50; 
-                
-                const isScrollingInBuilder = builderRect.top < stickyTopPosition && builderRect.bottom > (stickyTopPosition + summaryBox.offsetHeight + buffer);
+                const packageBuilderHeader = packageBuilder.querySelector('.header');
+                if (!packageBuilderHeader) return;
 
-                if (isScrollingInBuilder) {
+                const headerRect = packageBuilderHeader.getBoundingClientRect();
+                const mainRect = builderMain.getBoundingClientRect();
+                const stickyTopPosition = 70; // As defined in CSS
+
+                // Condition to make it compact:
+                // The bottom of the header section is now scrolled above the sticky position.
+                const isPastHeader = headerRect.bottom < stickyTopPosition;
+
+                // Condition to expand it again at the bottom:
+                // The bottom of the main content area is now visible within the viewport.
+                const isAtBottom = mainRect.bottom < window.innerHeight;
+
+                if (isPastHeader && !isAtBottom) {
                     summaryBox.classList.add('is-compact');
                 } else {
                     summaryBox.classList.remove('is-compact');
