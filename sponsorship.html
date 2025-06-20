@@ -1325,6 +1325,21 @@
         display: inline-block;
     }
 
+    /* Mobile-friendly package builder */
+    @media (max-width: 991.98px) {
+        #package-builder .builder-sidebar {
+            order: -1; /* Move summary to top */
+            top: 70px; /* Adjust for mobile navbar height */
+            z-index: 1020; /* Ensure it's above other content */
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        #package-builder .builder-main {
+            width: 100%;
+        }
+    }
+
   </style>
   
 </head>
