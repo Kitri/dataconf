@@ -1108,6 +1108,180 @@
         border: 1px solid #c7d2fe;
     }
 
+    /* New styles for Package Builder */
+    #package-builder .builder-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    #package-builder .builder-main {
+        flex: 3;
+        min-width: 300px;
+    }
+    #package-builder .builder-sidebar {
+        flex: 2;
+        min-width: 300px;
+        position: sticky;
+        top: 100px; /* Adjust based on your navbar height */
+        align-self: flex-start;
+    }
+    #package-builder .builder-section {
+        margin-bottom: 30px;
+    }
+    #package-builder .builder-section h3 {
+        color: #f97316;
+        border-bottom: 2px solid #f1f5f9;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    #package-builder .option-card {
+        background: #fafafa;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    #package-builder .option-card:hover {
+        border-color: #f97316;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    #package-builder .option-card.selected {
+        border-color: #f97316;
+        background-color: #fffbeb;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    #package-builder .option-card input {
+        margin-right: 15px;
+    }
+    #package-builder .option-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    #package-builder .option-name {
+        font-weight: 600;
+        color: #374151;
+    }
+    #package-builder .option-price {
+        font-weight: 700;
+        color: #f97316;
+        font-size: 1.1rem;
+    }
+    #package-builder .option-description {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-left: 30px;
+        margin-top: 5px;
+    }
+    #package-builder .summary-box {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    #package-builder .summary-box h3 {
+        text-align: center;
+        color: #f97316;
+        margin-bottom: 25px;
+    }
+    #package-builder #summary-items li {
+        padding: 5px 0;
+        border-bottom: 1px solid #f1f5f9;
+        display: flex;
+        justify-content: space-between;
+    }
+    #package-builder #summary-total {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 2px solid #f97316;
+        text-align: center;
+    }
+    #package-builder #total-price {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #f97316;
+    }
+    #package-builder #summary-benefits {
+        margin-top: 25px;
+    }
+    #package-builder #summary-benefits-list {
+        font-size: 0.9rem;
+        list-style-position: inside;
+        padding-left: 5px;
+    }
+    #package-builder .summary-placeholder {
+        text-align: center;
+        color: #9ca3af;
+        padding: 40px 0;
+    }
+     #package-builder .builder-cta {
+        margin-top: 20px;
+        padding: 15px;
+        width: 100%;
+        background: linear-gradient(135deg, #22c55e, #16a34a);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+     #package-builder .builder-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(34, 197, 94, 0.4);
+    }
+    #package-builder .free-addon-badge {
+        background-color: #22c55e;
+        color: white;
+        font-size: 0.8rem;
+        padding: 3px 8px;
+        border-radius: 4px;
+        margin-left: 5px;
+    }
+    #package-builder .option-card.upgrade-package {
+        border-left: 4px solid #8b5cf6;
+    }
+    #package-builder .option-card.eligible-free {
+        outline: 2px solid #8b5cf6; /* Changed to purple */
+        outline-offset: -2px;
+    }
+    #package-builder #addon-selection-prompt {
+        color: #8b5cf6; /* Changed to purple */
+        font-weight: 600;
+        margin-top: 15px;
+        text-align: center;
+        background: #f5f3ff; /* Light purple */
+        padding: 10px;
+        border-radius: 8px;
+    }
+    #package-builder .builder-cta:disabled {
+        background: #d1d5db;
+        cursor: not-allowed;
+        box-shadow: none;
+        transform: none;
+    }
+    #package-builder .option-card.disabled {
+        opacity: 0.6;
+        background: #f3f4f6;
+        cursor: not-allowed;
+    }
+     #package-builder .option-card.disabled label {
+        cursor: not-allowed;
+    }
+    #package-builder .restriction-badge {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #dc2626;
+        margin-left: 30px;
+        margin-top: 8px;
+        display: block;
+    }
+
   </style>
   
 </head>
@@ -1201,6 +1375,9 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="add-ons-tab" data-bs-toggle="tab" data-bs-target="#add-ons" type="button" role="tab" aria-controls="add-ons" aria-selected="false">Feature Branding Options</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="package-builder-tab" data-bs-toggle="tab" data-bs-target="#package-builder" type="button" role="tab" aria-controls="package-builder" aria-selected="false">Build Your Package</button>
                     </li>
                     <li class="nav-item" role="presentation" style="display: none;">
                         <button class="nav-link" id="examples-tab" data-bs-toggle="tab" data-bs-target="#examples" type="button" role="tab" aria-controls="examples" aria-selected="false">Strategy Examples</button>
@@ -2099,7 +2276,7 @@
                         <div class="proposal-section">
                             <header class="header">
                                 <h1 class="title">Why become a DataConf Sponsor?</h1>
-                                <p>DataConf is a non-profit conference for practitioners, by practitioners. Your support is a direct investment in the local tech community, helping us create a vital space for sharing real-world experience and fostering genuine connections.</p>
+                                <p>DataConf is a non-profit conference for practitioners, by practitioners. <br /><br /> Your support is a direct investment in the local tech community, helping us create a vital space for sharing real-world experience and fostering genuine connections.</p>
                             </header>
 
                             <section class="roi-section" style="padding-top: 0; border: none; box-shadow: none;">
@@ -2182,6 +2359,47 @@
                                 <h3>Ready to Support the Data Community?</h3>
                                 <p>Become a sponsor to make DataConf 2025 a success. Your support makes all the difference.</p>
                                 <a href="mailto:info@dataconf.co.za?subject=Sponsorship Interest" class="cta-button">Become a Sponsor</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="package-builder" role="tabpanel" aria-labelledby="package-builder-tab">
+                        <div class="proposal-section">
+                             <header class="header">
+                                <h1 class="title">Build Your Custom Sponsorship Package</h1>
+                                <p>Select your ideal combination of packages and features below.</p>
+                            </header>
+                            <div class="builder-grid">
+                                <div class="builder-main">
+                                    <div class="builder-section">
+                                        <h3>Step 1: Choose Your Exhibition Package</h3>
+                                        <div id="exhibition-options"></div>
+                                    </div>
+                                    <div class="builder-section">
+                                        <h3>Step 2: Add Feature Branding</h3>
+                                        <p>Can be purchased as standalone options or as add-ons to any exhibition package.</p>
+                                        <div id="addon-options"></div>
+                                    </div>
+                                </div>
+                                <div class="builder-sidebar">
+                                    <div class="summary-box">
+                                        <h3>Your Custom Package</h3>
+                                        <div id="summary-content">
+                                            <div class="summary-placeholder">
+                                                <p>Your selections will appear here.</p>
+                                            </div>
+                                        </div>
+                                        <div id="summary-total" style="display: none;">
+                                            <p style="margin-bottom: 5px; font-size: 1rem; color: #6b7280;">TOTAL PRICE (ex. VAT)</p>
+                                            <div id="total-price">R0</div>
+                                        </div>
+                                        <div id="summary-benefits" style="display: none;">
+                                             <h4 style="font-size: 1.1rem; color: #374151; margin-bottom: 10px;">Included Benefits:</h4>
+                                             <ul id="summary-benefits-list"></ul>
+                                        </div>
+                                        <div id="addon-selection-prompt" style="display: none;"></div>
+                                        <button id="package-builder-cta" class="builder-cta" style="display: none;">Get in Touch</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2326,6 +2544,289 @@
             }
         });
     }
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // --- DATA ---
+    const premiumBenefits = ['Premium Exhibition Space (1 table, 3 chairs)', '3 Delegate Passes included', 'Prime Location', 'Digital Branding', 'Custom printed sock banners'];
+    
+    const premiumPlusBaseBenefits = [...premiumBenefits, 'Speaking Slot (40min)', 'Delegate Bag Branding'];
+    
+    const headlineBaseBenefits = [...premiumPlusBaseBenefits, 'Double Exhibition Space', 'Headline Sponsor Status', 'Opening Remarks Opportunity', '1 Extra Delegate Pass (4 total)'];
+
+    const exhibitionPackages = [
+        { id: 'ex-none', name: 'No Exhibition Package', price: 0, benefits: [] },
+        { id: 'ex-starter', name: 'Starter Package', price: 30000, benefits: ['Exhibition space (1 table + 1 chair)', '1 bring your own pull-up banner', '1 delegate pass', 'Digital branding'] },
+        { id: 'ex-growth', name: 'Growth Package', price: 40000, benefits: ['Enhanced exhibition space (1 table + 2 chairs)', '2 bring your own pull-up banners', '2 delegate passes', 'Digital branding package', 'Add more delegate passes at 8% discount'] },
+        { id: 'ex-premium', name: 'Premium Package', price: 50000, benefits: premiumBenefits },
+        { id: 'ex-premium-plus', name: 'Premium Plus Package', price: 85000, benefits: premiumPlusBaseBenefits, includes_addon: 15000 },
+        { id: 'ex-headline', name: 'Headline Package', price: 100000, benefits: headlineBaseBenefits, includes_addon: 15000 }
+    ];
+
+    const addons = [
+        { id: 'addon-notebook', name: 'Notebook & Pen Branding', price: 15000, description: 'Custom branded notebooks + pens for all delegates.' },
+        { id: 'addon-speaker-tshirt', name: 'Speaker T-Shirt Branding', price: 15000, description: 'Exclusive branded speaker t-shirts.', requires: ['ex-premium-plus', 'ex-headline'] },
+        { id: 'addon-delegate-tshirt', name: 'Delegate T-Shirt Branding', price: 20000, description: 'Branding on delegate t-shirts for all delegates.', requiresExhibition: true},
+        { id: 'addon-water-bottle', name: 'Water Bottle Branding', price: 15000, description: 'Custom branded reusable water bottles.' },
+        { id: 'addon-lanyard', name: 'Lanyard Branding', price: 15000, description: 'Your logo on every delegate lanyard and name badge.' },
+        { id: 'addon-coffee', name: 'Coffee Sponsor', price: 35000, description: 'Sponsor barista coffee for the event, with your logo on takeaway cups.' },
+        { id: 'addon-mixer-drinks', name: 'Data Mixer Drinks', price: 15000, description: 'Sponsor our end-of-day networking drinks + bar branding.' },
+        { id: 'addon-lunch', name: 'Lunch Sponsorship', price: 15000, description: 'Sponsor lunch for all attendees + lunch area branding.' },
+        { id: 'addon-speaker-dinner', name: 'Speaker Dinner', price: 15000, description: 'Host our speaker dinner the evening before + attend as VIP (2 guests).' },
+        { id: 'addon-photographer-half', name: 'Half-Day Photographer', price: 15000, description: 'Your logo on all photos from a half-day shoot.', group: 'photo' },
+        { id: 'addon-photographer-full', name: 'Full-Day Photographer', price: 25000, description: 'Your logo on all photos from a full-day shoot.', group: 'photo' }
+    ];
+
+    // --- RENDER ---
+    const exhibitionContainer = document.getElementById('exhibition-options');
+    exhibitionPackages.forEach(pkg => {
+        const isUpgrade = pkg.includes_addon;
+        exhibitionContainer.innerHTML += `
+            <div class="option-card ${isUpgrade ? 'upgrade-package' : ''}" data-id="${pkg.id}">
+                <label for="${pkg.id}" class="option-header">
+                    <div style="display: flex; align-items: center;">
+                        <input type="radio" id="${pkg.id}" name="exhibition_package" value="${pkg.id}">
+                        <span class="option-name">${pkg.name}</span>
+                    </div>
+                    <span class="option-price">${pkg.price > 0 ? 'R' + pkg.price.toLocaleString() : ''}</span>
+                </label>
+            </div>
+        `;
+    });
+
+    const addonContainer = document.getElementById('addon-options');
+    addons.forEach(addon => {
+        let restrictionText = '';
+        if (addon.requires) {
+            restrictionText = 'Requires Premium Plus or Headline package.';
+        } else if (addon.requiresExhibition) {
+            restrictionText = 'Requires any Exhibition package.';
+        }
+
+        addonContainer.innerHTML += `
+            <div class="option-card" data-id="${addon.id}" data-group="${addon.group || ''}">
+                <label for="${addon.id}" class="option-header">
+                     <div style="display: flex; align-items: center;">
+                        <input type="checkbox" id="${addon.id}" name="addon_package" value="${addon.id}">
+                        <span class="option-name">${addon.name}</span>
+                    </div>
+                    <span class="option-price">R${addon.price.toLocaleString()}</span>
+                </label>
+                <div class="option-description">${addon.description}</div>
+                ${restrictionText ? `<div class="restriction-badge">${restrictionText}</div>` : ''}
+            </div>
+        `;
+    });
+
+    // --- LOGIC ---
+    const summaryPlaceholder = document.querySelector('#package-builder .summary-placeholder');
+    const summaryContent = document.getElementById('summary-content');
+    const summaryTotal = document.getElementById('summary-total');
+    const summaryBenefits = document.getElementById('summary-benefits');
+    const ctaButton = document.getElementById('package-builder-cta');
+    const addonPrompt = document.getElementById('addon-selection-prompt');
+
+    const inputs = document.querySelectorAll('#package-builder input');
+    inputs.forEach(input => input.addEventListener('change', updateSummary));
+
+    function updateSummary() {
+        // Get selected exhibition package
+        const selectedExhibitionId = document.querySelector('input[name="exhibition_package"]:checked')?.value || 'ex-none';
+        const selectedExhibitionPkg = exhibitionPackages.find(p => p.id === selectedExhibitionId);
+        const isUpgradePackage = !!selectedExhibitionPkg.includes_addon;
+
+        // Get selected addons
+        let selectedAddonIds = Array.from(document.querySelectorAll('input[name="addon_package"]:checked')).map(el => el.value);
+        let selectedAddons = addons.filter(a => selectedAddonIds.includes(a.id));
+
+        // Enforce rules for addons
+        const isExhibitionSelected = selectedExhibitionId !== 'ex-none';
+        
+        // --- Photo Exclusivity ---
+        const selectedPhotoAddon = selectedAddons.find(a => a.group === 'photo');
+        document.querySelectorAll('#addon-options .option-card[data-group="photo"]').forEach(card => {
+            const cardId = card.dataset.id;
+            const input = card.querySelector('input');
+            if (selectedPhotoAddon && cardId !== selectedPhotoAddon.id) {
+                card.classList.add('disabled');
+                input.disabled = true;
+            } else {
+                card.classList.remove('disabled');
+                input.disabled = false;
+            }
+        });
+
+        // --- General Addon Rules (T-shirts etc) ---
+        selectedAddons.forEach(addon => {
+            const checkbox = document.getElementById(addon.id);
+            if ((addon.requiresExhibition && !isExhibitionSelected) || 
+                (addon.requires && !addon.requires.includes(selectedExhibitionId))) {
+                checkbox.checked = false;
+            }
+        });
+        
+        // Refilter addons after enforcing rules
+        const finalSelectedAddonIds = Array.from(document.querySelectorAll('input[name="addon_package"]:checked')).map(el => el.value);
+        selectedAddons = addons.filter(a => finalSelectedAddonIds.includes(a.id));
+
+        // Calculate total price
+        let totalPrice = selectedExhibitionPkg.price;
+        let includedAddonValue = selectedExhibitionPkg.includes_addon || 0;
+        let freeAddonApplied = false;
+
+        let addonsForPriceCalc = [...selectedAddons].sort((a, b) => b.price - a.price);
+        
+        let discountedAddonId = null;
+
+        if (includedAddonValue > 0 && addonsForPriceCalc.length > 0) {
+            const mostExpensiveAddon = addonsForPriceCalc.shift(); // take most expensive off
+            const discount = Math.min(mostExpensiveAddon.price, includedAddonValue);
+            totalPrice += mostExpensiveAddon.price - discount;
+            discountedAddonId = mostExpensiveAddon.id;
+            freeAddonApplied = true;
+        }
+
+        addonsForPriceCalc.forEach(addon => {
+            totalPrice += addon.price;
+        });
+
+        // Collect benefits
+        let allBenefits = [...selectedExhibitionPkg.benefits];
+        if(isUpgradePackage && freeAddonApplied) {
+            allBenefits.push('--- Included Feature Branding ---');
+        } else if (isUpgradePackage) {
+            allBenefits.push('--- Feature Branding (Choose one up to R15,000) ---');
+        } else if (selectedAddons.length > 0) {
+            allBenefits.push('--- Feature Branding ---');
+        }
+        
+        selectedAddons.forEach(a => {
+            let benefitText = a.name;
+            if(a.id === discountedAddonId) {
+                 const addon = addons.find(ad => ad.id === discountedAddonId);
+                 if (addon.price <= includedAddonValue) {
+                    benefitText += ' (Included)';
+                 } else {
+                    benefitText += ' (Partially included)';
+                 }
+            }
+            allBenefits.push(benefitText);
+        });
+
+        // --- UPDATE UI ---
+        // Highlight eligible addons
+        document.querySelectorAll('#addon-options .option-card').forEach(card => {
+            card.classList.remove('eligible-free');
+            if (isUpgradePackage) {
+                const addon = addons.find(a => a.id === card.dataset.id);
+                if (addon && addon.price <= includedAddonValue) {
+                    card.classList.add('eligible-free');
+                }
+            }
+        });
+
+        // Toggle card styles
+        document.querySelectorAll('#package-builder .option-card').forEach(card => {
+            const input = card.querySelector('input');
+            if (input && input.checked) {
+                card.classList.add('selected');
+            } else {
+                card.classList.remove('selected');
+            }
+        });
+        
+        if (totalPrice === 0) {
+            summaryPlaceholder.style.display = 'block';
+            summaryContent.innerHTML = '';
+            summaryTotal.style.display = 'none';
+            summaryBenefits.style.display = 'none';
+            ctaButton.style.display = 'none';
+            addonPrompt.style.display = 'none';
+        } else {
+            summaryPlaceholder.style.display = 'none';
+            summaryTotal.style.display = 'block';
+            summaryBenefits.style.display = 'block';
+            ctaButton.style.display = 'block';
+            
+            // Build summary items HTML
+            let itemsHtml = '<ul id="summary-items">';
+            if (selectedExhibitionId !== 'ex-none') {
+                itemsHtml += `<li><span>${selectedExhibitionPkg.name}</span> <span>R${selectedExhibitionPkg.price.toLocaleString()}</span></li>`;
+            }
+
+            selectedAddons.forEach(addon => {
+                itemsHtml += `<li><span>${addon.name}</span> <span>R${addon.price.toLocaleString()}</span></li>`;
+            });
+
+            if (freeAddonApplied) {
+                const creditLine = `<li><span>${selectedExhibitionPkg.name} Credit</span> <span style="color: #16a34a; white-space: nowrap;">- R ${includedAddonValue.toLocaleString()}</span></li>`;
+                itemsHtml += creditLine;
+            }
+
+            itemsHtml += '</ul>';
+            summaryContent.innerHTML = itemsHtml;
+
+            // Update total price
+            document.getElementById('total-price').innerText = 'R' + totalPrice.toLocaleString();
+
+            // Update benefits list
+            const benefitsList = document.getElementById('summary-benefits-list');
+            benefitsList.innerHTML = allBenefits.map(b => `<li>${b.startsWith('---') ? `<strong>${b.replaceAll('---','')}</strong>` : b}</li>`).join('');
+        }
+
+        // Handle CTA button state for upgrade packages
+        const addonSelected = selectedAddons.length > 0;
+        if (isUpgradePackage && !addonSelected) {
+            ctaButton.disabled = true;
+            addonPrompt.innerText = 'Please select your included feature brand to continue.';
+            addonPrompt.style.display = 'block';
+        } else {
+            ctaButton.disabled = false;
+            addonPrompt.style.display = 'none';
+        }
+    }
+    
+    // Initial call to set the state
+    document.getElementById('ex-none').checked = true;
+    updateSummary();
+
+    // CTA button logic
+    ctaButton.addEventListener('click', () => {
+        const selectedExhibitionPkg = exhibitionPackages.find(p => p.id === document.querySelector('input[name="exhibition_package"]:checked').value);
+        const selectedAddons = addons.filter(a => Array.from(document.querySelectorAll('input[name="addon_package"]:checked')).map(el => el.value).includes(a.id));
+        const totalPrice = document.getElementById('total-price').innerText;
+
+        let emailBody = 'Hello DataConf Team,\n\nI am interested in the following custom sponsorship package:\n\n';
+        
+        if (selectedExhibitionPkg && selectedExhibitionPkg.id !== 'ex-none') {
+            emailBody += `--- EXHIBITION PACKAGE ---\n${selectedExhibitionPkg.name}: R${selectedExhibitionPkg.price.toLocaleString()}\n\n`;
+        }
+
+        if (selectedAddons.length > 0) {
+            emailBody += '--- FEATURE BRANDING ---\n';
+            let freeAddonApplied = false;
+            let includedAddonValue = selectedExhibitionPkg.includes_addon || 0;
+            selectedAddons.forEach(a => {
+                let priceText = `R${a.price.toLocaleString()}`;
+                 if (includedAddonValue > 0 && a.price <= includedAddonValue && !freeAddonApplied) {
+                    priceText = `(Included with ${selectedExhibitionPkg.name})`;
+                    freeAddonApplied = true;
+                }
+                emailBody += `${a.name}: ${priceText}\n`;
+            });
+            emailBody += '\n';
+        }
+        
+        emailBody += `------------------------------\n`;
+        emailBody += `TOTAL ESTIMATED COST: ${totalPrice} (ex. VAT)\n`;
+        emailBody += `------------------------------\n\n`;
+        emailBody += `I look forward to hearing from you.\n\nBest regards,`;
+
+        const mailtoLink = `mailto:info@dataconf.co.za?subject=${encodeURIComponent('Custom DataConf Sponsorship Package Inquiry')}&body=${encodeURIComponent(emailBody)}`;
+        window.location.href = mailtoLink;
+    });
+});
 </script>
   
 </body>
