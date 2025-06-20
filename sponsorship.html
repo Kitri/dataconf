@@ -304,7 +304,14 @@
         margin-right: 10px;
         margin-top: 2px;
         flex-shrink: 0;
+        width: 20px; /* Added for alignment */
+        text-align: center; /* Added for alignment */
     }
+    #sponsorship-proposal .proposal-section .plus-features .features-list li:before {
+        content: "+";
+        color: #f97316; /* orange-500 */
+    }
+    
     #sponsorship-proposal .proposal-section .package-card.starter { border-top: 5px solid #10b981; }
     #sponsorship-proposal .proposal-section .package-card.growth { border-top: 5px solid #f59e0b; }
     #sponsorship-proposal .proposal-section .package-card.premium { border-top: 5px solid #8b5cf6; }
@@ -663,6 +670,8 @@
         margin-right: 10px;
         margin-top: 2px;
         flex-shrink: 0;
+        width: 20px; /* Added for alignment */
+        text-align: center; /* Added for alignment */
     }
     #sponsorship-proposal .proposal-section .intro-section {
         background: white;
@@ -782,6 +791,8 @@
         margin-right: 10px;
         margin-top: 2px;
         flex-shrink: 0;
+        width: 20px; /* Added for alignment */
+        text-align: center; /* Added for alignment */
     }
     #sponsorship-proposal .proposal-section .stats-section {
         background: white;
@@ -1085,6 +1096,18 @@
         padding-left: 20px;
     }
 
+    #sponsorship-proposal .proposal-section .exclusive-badge {
+        background: #e0e7ff; /* A light purple to match premium colors */
+        color: #3730a3;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 15px;
+        border: 1px solid #c7d2fe;
+    }
+
   </style>
   
 </head>
@@ -1174,10 +1197,10 @@
                         <button class="nav-link active" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="true">Summary</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="booth-packages-tab" data-bs-toggle="tab" data-bs-target="#booth-packages" type="button" role="tab" aria-controls="booth-packages" aria-selected="false">Exhibition Packages</button>
+                        <button class="nav-link" id="exhibition-packages-tab" data-bs-toggle="tab" data-bs-target="#exhibition-packages" type="button" role="tab" aria-controls="exhibition-packages" aria-selected="false">Exhibition Packages</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="add-ons-tab" data-bs-toggle="tab" data-bs-target="#add-ons" type="button" role="tab" aria-controls="add-ons" aria-selected="false">Feature Branding Options</button>
+                        <button class="nav-link" id="add-ons-tab" data-bs-toggle="tab" data-bs-target="#add-ons" type="button" role="tab" aria-controls="add-ons" aria-selected="false">Add-Ons</button>
                     </li>
                     <li class="nav-item" role="presentation" style="display: none;">
                         <button class="nav-link" id="examples-tab" data-bs-toggle="tab" data-bs-target="#examples" type="button" role="tab" aria-controls="examples" aria-selected="false">Strategy Examples</button>
@@ -1204,18 +1227,10 @@
                                 </div>
                                 <div class="option-separator">+</div>
                                 <div class="option-box">
-                                    <h4>Feature Branding Options</h4>
+                                    <h4>Add-Ons</h4>
                                     <p>Enhance your visibility with a Feature Sponsorship — available as standalone or add-on options</p>
                                 </div>
                             </div>
-
-                            <!-- <div class="download-section">
-                                <h3>📄 Download Complete Prospectus</h3>
-                                <p>Get the full sponsorship details in your preferred format</p>
-                                <div class="download-buttons">
-                                    <a href="assets/files/Sponsorship Proposal.pdf" class="btn btn-primary" target="_blank">📖 Full Prospectus PDF</a>
-                                </div>
-                            </div> -->
 
                             <section class="section">
                                 <h2>EXHIBITION PACKAGES</h2>
@@ -1263,7 +1278,7 @@
                                         </div>
                                         <div class="summary-features">
                                             • Everything in Premium<br>
-                                            • 1 speaking slot (20 mins)<br>
+                                            • 1 speaking slot (40 mins)<br>
                                             • 1 feature branding of your choice<br>
                                             • Delegate bag branding
                                         </div>
@@ -1282,7 +1297,7 @@
                                     </div>
                                 </div>
 
-                                <h3>FEATURE BRANDING OPTIONS</h3>
+                                <h3>ADD-ONS</h3>
                                 <p class="summary-section-description">These can be purchased on their own or added to any exhibition package.</p>
                                 <div class="summary-grid">
                                      <div class="summary-card addon">
@@ -1330,7 +1345,7 @@
                                     <div class="summary-card addon">
                                         <div class="summary-card-header">
                                             <h4 class="summary-package-name">Speaker T-Shirts</h4>
-                                            <div class="summary-price">R25,000</div>
+                                            <div class="summary-price">R15,000</div>
                                         </div>
                                         <div class="summary-features">Exclusive branded t-shirts for all event speakers.</div>
                                     </div>
@@ -1339,7 +1354,7 @@
                                             <h4 class="summary-package-name">Lanyards</h4>
                                             <div class="summary-price">R15,000</div>
                                         </div>
-                                        <div class="summary-features">Your logo on every delegate lanyard.</div>
+                                        <div class="summary-features">Your logo on every delegate lanyard and name badge.</div>
                                     </div>
                                 </div>
                             </section>
@@ -1362,7 +1377,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="booth-packages" role="tabpanel" aria-labelledby="booth-packages-tab">
+                    <div class="tab-pane fade" id="exhibition-packages" role="tabpanel" aria-labelledby="exhibition-packages-tab">
                         <div class="proposal-section">
                             <header class="header">
                                 <h1 class="title">Exhibition Packages</h1>
@@ -1418,7 +1433,7 @@
                                 </div>
 
                                 <div class="package-card premium-plus">
-                                    <div class="featured-badge">SPEAKING SLOT</div>
+                                    <div class="featured-badge">UPGRADE</div>
                                     <div class="package-header">
                                         <h3 class="package-name">Premium Plus Package</h3>
                                         <p class="package-subtitle">Premium exhibition package + feature branding add-on + speaking opportunity</p>
@@ -1428,23 +1443,23 @@
                                     <div class="package-breakdown">
                                         <div class="included-features">
                                             <h4>Everything in Premium</h4>
-                                            <ul>
-                                                <li>✓ Premium Exhibition Space</li>
-                                                <li>✓ 3 Delegate Passes</li>
-                                                <li>✓ Prime Location</li>
-                                                <li>✓ Digital Branding</li>
+                                            <ul class="features-list">
+                                                <li>Premium Exhibition Space</li>
+                                                <li>3 Delegate Passes</li>
+                                                <li>Prime Location</li>
+                                                <li>Digital Branding</li>
                                             </ul>
                                         </div>
                                         <div class="plus-features">
                                             <h4>Plus</h4>
-                                            <ul>
-                                                <li>+ Speaking Slot
+                                            <ul class="features-list">
+                                                <li>Speaking Slot
                                                     <span class="feature-description">40min speaking slot to present to 100-150 data & AI professionals</span>
                                                 </li>
-                                                <li>+ Choice of Any Feature branding as add-on
+                                                <li>Choice of Any Feature branding as add-on
                                                     <span class="feature-description">Limited to items to the value of R15,000</span>
                                                 </li>
-                                                <li>+ Delegate Bag Branding
+                                                <li>Delegate Bag Branding
                                                     <span class="feature-description">Your logo on every delegate's take-home bag</span>
                                                 </li>
                                             </ul>
@@ -1453,7 +1468,7 @@
                                 </div>
 
                                 <div class="package-card headline">
-                                    <div class="featured-badge">PREMIUM</div>
+                                    <div class="featured-badge">UPGRADE</div>
                                     <div class="package-header">
                                         <h3 class="package-name">Headline Package</h3>
                                         <p class="package-subtitle">Become THE name associated with DataConf</p>
@@ -1463,7 +1478,7 @@
                                     <div class="package-breakdown">
                                         <div class="included-features">
                                             <h4>Everything in Premium Plus</h4>
-                                            <ul>
+                                            <ul class="features-list">
                                                 <li>Speaking Slot</li>
                                                 <li>Choice of Feature Branding Add-on</li>
                                                 <li>Delegate Bag Branding</li>
@@ -1472,7 +1487,7 @@
                                         </div>
                                         <div class="plus-features">
                                             <h4>Plus</h4>
-                                            <ul>
+                                            <ul class="features-list">
                                                 <li>Double Exhibition Space
                                                     <span class="feature-description">2 tables, 4+ chairs, prime positioning</span>
                                                 </li>
@@ -1566,7 +1581,7 @@
                     <div class="tab-pane fade" id="add-ons" role="tabpanel" aria-labelledby="add-ons-tab">
                         <div class="proposal-section">
                             <header class="header">
-                                <h1 class="title">Feature Branding</h1>
+                                <h1 class="title">Add-Ons</h1>
                                 <p>Enhance your presence with branded merchandise and event experiences</p>
                             </header>
 
@@ -1578,13 +1593,11 @@
                                 </div>
                                 
                                 <div class="addons-grid">
-                                    <!-- <div class="addon-card reserved"> -->
                                     <div class="addon-card">
                                         <div class="addon-header">
                                             <div class="addon-icon">📓</div>
                                             <div class="addon-info">
-                                                <!-- <h4>Notebook & Pen Branding <span class="reserved-badge">RESERVED</span></h4> -->
-                                                <h4>Notebook & Pen Branding </h4>
+                                                <h4>Notebook & Pen Branding</h4>
                                                 <div class="addon-price">R15,000</div>
                                             </div>
                                         </div>
@@ -1601,7 +1614,7 @@
                                             <div class="addon-icon">🎽</div>
                                             <div class="addon-info">
                                                 <h4>Speaker T-Shirt Branding</h4>
-                                                <div class="addon-price">R25,000</div>
+                                                <div class="addon-price">R15,000</div>
                                             </div>
                                         </div>
                                         <p class="addon-description">
@@ -1609,6 +1622,9 @@
                                         </p>
                                         <div class="addon-includes">
                                             <strong>Includes:</strong> 1 delegate pass
+                                        </div>
+                                        <div class="exclusive-badge">
+                                            Exclusive for Premium Plus or Headline sponsors
                                         </div>
                                     </div>
 
@@ -1762,7 +1778,7 @@
 
                             <div class="contact">
                                 <h3>Ready to Add Impact to Your Sponsorship?</h3>
-                                <p>Combine exhibition packages with feature branding add-ons for maximum brand exposure</p>
+                                <p>Combine exhibition packages with add-ons for maximum brand exposure</p>
                                 <p style="margin-top: 20px;"><strong>Email:</strong> info@dataconf.co.za | <strong>Social:</strong> @DataConfZA</p>
                                 <p style="margin-top: 10px; opacity: 0.8;">Each add-on is limited to 1 sponsor. First come, first served!</p>
                             </div>
