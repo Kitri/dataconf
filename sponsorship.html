@@ -1325,55 +1325,6 @@
         display: inline-block;
     }
 
-    /* Mobile-friendly package builder */
-    @media (max-width: 991.98px) {
-        #package-builder .builder-sidebar {
-            order: -1; /* Move summary to top */
-            top: 70px; /* Adjust for mobile navbar height */
-            z-index: 1020; /* Ensure it's above other content */
-            width: 100%;
-            margin-bottom: 30px;
-        }
-
-        #package-builder .builder-main {
-            width: 100%;
-        }
-
-        /* Compact summary styles for mobile sticky nav */
-        #package-builder .summary-box.is-compact {
-            padding: 10px 15px;
-            transition: all 0.2s ease-in-out;
-        }
-
-        #package-builder .summary-box.is-compact > h3,
-        #package-builder .summary-box.is-compact #summary-content,
-        #package-builder .summary-box.is-compact #summary-benefits,
-        #package-builder .summary-box.is-compact #package-builder-cta,
-        #package-builder .summary-box.is-compact #addon-selection-prompt {
-            display: none !important;
-        }
-
-        #package-builder .summary-box.is-compact #summary-total {
-            display: flex !important;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-
-        #package-builder .summary-box.is-compact #summary-total p {
-            margin: 0;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #374151;
-        }
-
-        #package-builder .summary-box.is-compact #total-price {
-            font-size: 1.6rem;
-        }
-    }
-
   </style>
   
 </head>
@@ -2978,44 +2929,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const mailtoLink = `mailto:info@dataconf.co.za?subject=${encodeURIComponent('Custom DataConf Sponsorship Package Inquiry')}&body=${encodeURIComponent(emailBody)}`;
         window.location.href = mailtoLink;
     });
-
-    // Mobile compact summary logic
-    const packageBuilder = document.getElementById('package-builder');
-    const summaryBox = document.querySelector('#package-builder .summary-box');
-    const builderMain = document.querySelector('#package-builder .builder-main');
-
-    if (packageBuilder && summaryBox && builderMain) {
-        const handleScroll = () => {
-            if (window.innerWidth < 992) { // Only on mobile
-                const packageBuilderHeader = packageBuilder.querySelector('.header');
-                if (!packageBuilderHeader) return;
-
-                const headerRect = packageBuilderHeader.getBoundingClientRect();
-                const mainRect = builderMain.getBoundingClientRect();
-                const stickyTopPosition = 70; // As defined in CSS
-
-                // Condition to make it compact:
-                // The bottom of the header section is now scrolled above the sticky position.
-                const isPastHeader = headerRect.bottom < stickyTopPosition;
-
-                // Condition to expand it again at the bottom:
-                // The bottom of the main content area is now visible within the viewport.
-                const isAtBottom = mainRect.bottom < window.innerHeight;
-
-                if (isPastHeader && !isAtBottom) {
-                    summaryBox.classList.add('is-compact');
-                } else {
-                    summaryBox.classList.remove('is-compact');
-                }
-            } else {
-                // Always remove for desktop view
-                summaryBox.classList.remove('is-compact');
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        window.addEventListener('resize', handleScroll);
-    }
 });
 </script>
   
