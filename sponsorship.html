@@ -1367,6 +1367,7 @@
                 <div class="mbr-section-btn"><a class="btn btn-secondary display-4" href="assets/files/Sponsorship Proposal.pdf" target="_blank">Sponsorship Packages</a>
                 -->
                 <a class="btn btn-secondary display-4" href="mailto:info@dataconf.co.za?subject=I want to be a sponsor! ">Become a Sponsor</a>
+                <a class="btn btn-primary display-4" href="#" id="build-package-link" style="margin-left: 10px;">Build your custom package</a>
             </div>
         </div>
     </div>
@@ -2592,6 +2593,24 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    const buildPackageLink = document.getElementById('build-package-link');
+    if (buildPackageLink) {
+        buildPackageLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const packageBuilderTab = document.getElementById('package-builder-tab');
+            if (packageBuilderTab) {
+                const tab = new bootstrap.Tab(packageBuilderTab);
+                tab.show();
+
+                const sponsorshipSection = document.getElementById('sponsorship-proposal');
+                if (sponsorshipSection) {
+                    sponsorshipSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    }
+
     // --- DATA ---
     const premiumBenefits = ['Premium Exhibition Space (1 table, 3 chairs)', '3 Delegate Passes included', 'Prime Location', 'Digital Branding', 'Custom printed sock banners'];
     
