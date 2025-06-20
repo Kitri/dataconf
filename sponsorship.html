@@ -1048,43 +1048,6 @@
         }
     }
 
-    /* Redesigned package card features */
-    #booth-packages .package-breakdown {
-        margin-top: 25px;
-    }
-    #booth-packages .included-features, #booth-packages .plus-features {
-        margin-bottom: 20px;
-    }
-    #booth-packages .package-breakdown h4 {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #374151;
-        padding-bottom: 8px;
-        margin-bottom: 12px;
-        border-bottom: 2px solid #f1f5f9;
-    }
-    #booth-packages .package-breakdown ul {
-        list-style: none;
-        padding-left: 0;
-        margin-bottom: 0;
-    }
-    #booth-packages .package-breakdown li {
-        font-size: 0.95rem;
-        color: #374151;
-        margin-bottom: 12px;
-        line-height: 1.5;
-    }
-    #booth-packages .plus-features li {
-        font-weight: 600;
-    }
-    #booth-packages .package-breakdown .feature-description {
-        display: block;
-        font-weight: 400;
-        color: #6b7280;
-        font-size: 0.85rem;
-        padding-left: 20px;
-    }
-
   </style>
   
 </head>
@@ -1174,6 +1137,10 @@
                         <button class="nav-link active" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="true">Summary</button>
                     </li>
                     <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="booth-packages-tab" type="button">More detail coming soon</button>
+                    </li>
+<!-- 
+                    <li class="nav-item" role="presentation">
                         <button class="nav-link" id="booth-packages-tab" data-bs-toggle="tab" data-bs-target="#booth-packages" type="button" role="tab" aria-controls="booth-packages" aria-selected="false">Choose an exhibition package</button>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -1184,7 +1151,7 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="benefits-tab" data-bs-toggle="tab" data-bs-target="#benefits" type="button" role="tab" aria-controls="benefits" aria-selected="false">Why Sponsor?</button>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="col-lg-9">
@@ -1375,7 +1342,7 @@
                                         <h3 class="package-name">Starter Package</h3>
                                         <p class="package-subtitle">Perfect for first-time sponsors and growing companies</p>
                                         <div class="package-price">R30,000</div>
-                                        <div class="package-availability">Limited to 6 sponsors</div>
+                                        <div class="package-availability">(1 RESERVED - 3 of 4 available)</div>
                                     </div>
                                     <ul class="features-list">
                                         <li>Exhibition space (1 table + 1 chair)</li>
@@ -1391,7 +1358,7 @@
                                         <h3 class="package-name">Growth Package</h3>
                                         <p class="package-subtitle">For companies ready to make meaningful connections</p>
                                         <div class="package-price">R40,000</div>
-                                        <div class="package-availability">Limited to 4 sponsors</div>
+                                        <div class="package-availability">(1 RESERVED - 3 of 4 available)</div>
                                     </div>
                                     <ul class="features-list">
                                         <li>Enhanced exhibition space (1 table + 2 chairs)</li>
@@ -1408,14 +1375,16 @@
                                         <h3 class="package-name">Premium Package</h3>
                                         <p class="package-subtitle">Maximum space impact and visibility</p>
                                         <div class="package-price">R50,000</div>
-                                        <div class="package-availability">Limited to 3 sponsors total</div>
+                                        <div class="package-availability">(1 RESERVED - 3 of 4 available)</div>
                                     </div>
                                     <ul class="features-list">
-                                        <li>Premium Exhibition Space (1 table, 3 chairs)</li>
-                                        <li>3 Delegate Passes included</li>
-                                        <li>Prime Location</li>
-                                        <li>Digital Branding</li>
-                                        <li>Custom printed sock banners</li>
+                                        <li>Premium exhibition space (1 table + 3 chairs)</li>
+                                        <li>Custom printed sock banners (printed by DataConf, yours to keep)</li>
+                                        <li><strong>Your choice of any 1 add-on opportunity</strong></li>
+                                        <li>3 delegate passes included</li>
+                                        <li>Enhanced Digital Branding</li>
+                                        <li>Prime location</li>
+                                        <li>Add more delegate passes at 8% discount</li>
                                     </ul>
                                     <a href="mailto:info@dataconf.co.za?subject=Sponsorship Interest: Premium Package" class="contact-cta">Select Premium Package</a>
                                 </div>
@@ -1426,70 +1395,48 @@
                                         <h3 class="package-name">Premium Plus Package</h3>
                                         <p class="package-subtitle">Premium exhibition package + add-on + speaking opportunity</p>
                                         <div class="package-price">R85,000</div>
-                                        <div class="package-availability">Upgrade of Premium. Limited to 2 sponsors.</div>
+                                        <div class="package-availability">(1 RESERVED - 3 of 4 available)</div>
                                     </div>
-                                    <div class="package-breakdown">
-                                        <div class="included-features">
-                                            <h4>Everything in Premium</h4>
-                                            <ul>
-                                                <li>✓ Premium Exhibition Space</li>
-                                                <li>✓ 3 Delegate Passes</li>
-                                                <li>✓ Prime Location</li>
-                                                <li>✓ Digital Branding</li>
-                                            </ul>
-                                        </div>
-                                        <div class="plus-features">
-                                            <h4>Plus</h4>
-                                            <ul>
-                                                <li>+ Speaking Slot
-                                                    <span class="feature-description">40min speaking slot to present to 100-150 data & AI professionals</span>
-                                                </li>
-                                                <li>+ Choice of Any Add-on
-                                                    <span class="feature-description">Limited to add-ons to the value of R15,000</span>
-                                                </li>
-                                                <li>+ Delegate Bag Branding
-                                                    <span class="feature-description">Your logo on every delegate's take-home bag</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <ul class="features-list">
+                                        <li>Premium exhibition space (1 table + 3 chairs)</li>
+                                        <li>2 bring your own pull-up banners (2m x 0.85m)</li>
+                                        <li>2 custom printed sock banners (printed by DataConf, yours to keep)</li>
+                                        <li>3 delegate passes included</li>
+                                        <li>Enhanced social media package</li>
+                                        <li>Logo featured in event app</li>
+                                        <li>Prime location</li>
+                                        <li><strong>1 speaking slot </strong></li>
+                                        <li><strong>Your choice of any 1 add-on opportunity</strong></li>
+                                        <li><strong>Delegate bag branding</strong></li>
+                                        <li>Add more delegate passes at 8% discount</li>
+                                    </ul>
                                     <a href="mailto:info@dataconf.co.za?subject=Sponsorship Interest: Premium Plus Package" class="contact-cta">Select Premium Plus Package</a>
                                 </div>
 
-                                <div class="package-card headline">
+                                <div class="package-card exhibition-headline">
                                     <div class="featured-badge">PREMIUM</div>
                                     <div class="package-header">
                                         <h3 class="package-name">Headline Package</h3>
                                         <p class="package-subtitle">Become THE name associated with DataConf</p>
                                         <div class="package-price">R100,000</div>
-                                        <div class="package-availability">Upgrade of Premium Plus. Limited to 1 sponsor.</div>
+                                        <div class="package-availability">(1 RESERVED - 3 of 4 available)</div>
                                     </div>
-                                    <div class="package-breakdown">
-                                        <div class="included-features">
-                                            <h4>Everything in Premium Plus</h4>
-                                            <ul>
-                                                <li>✓ Speaking Slot</li>
-                                                <li>✓ Choice of Add-on</li>
-                                                <li>✓ Delegate Bag Branding</li>
-                                                <li>✓ Premium Exhibition Space</li>
-                                            </ul>
-                                        </div>
-                                        <div class="plus-features">
-                                            <h4>Plus</h4>
-                                            <ul>
-                                                <li>+ Double Exhibition Space
-                                                    <span class="feature-description">2 tables, 4+ chairs, prime positioning</span>
-                                                </li>
-                                                <li>+ Headline Sponsor Status
-                                                     <span class="feature-description">Premium logo placement</span>
-                                                </li>
-                                                <li>+ Opening Remarks Opportunity
-                                                     <span class="feature-description">Address all attendees before the keynote</span>
-                                                </li>
-                                                <li>+ 1 Extra Delegate Pass (4 total)</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <ul class="features-list">
+                                        <li><strong>Double exhibition space (2 tables, 4+ chairs)</strong></li>
+                                        <li>2 pull-up banner spaces (bring your own 2 x 0.85m each)</li>
+                                        <li><strong>Banner wall instead of sock banner</strong></li>
+                                        <li><strong>4 delegate passes included</strong></li>
+                                        <li>Enhanced social media package</li>
+                                        <li>Logo featured in event app</li>
+                                        <li>Prime location</li>
+                                        <li><strong>1 speaking slot (20-minute presentation)</strong></li>
+                                        <li><strong>Your choice of any 1 add-on opportunity</strong></li>
+                                        <li><strong>Delegate bag branding</strong></li>
+                                        <li><strong>Headline sponsor status across all materials</strong></li>
+                                        <li><strong>Opening remarks opportunity</strong></li>
+                                        <li><strong>Premium logo placement </strong></li>
+                                        <li>Add more delegate passes at 8% discount</li>
+                                    </ul>
                                     <a href="mailto:info@dataconf.co.za?subject=Sponsorship Interest: Headline Package" class="contact-cta">Select Headline Package</a>
                                 </div>
                             </div>
@@ -1510,7 +1457,7 @@
                                     <tbody>
                                         <tr>
                                             <td class="feature-name">Exhibition Space</td>
-                                            <td>1 table + 1 chair</td>
+                                            <td>1 table + 2 chairs</td>
                                             <td>1 table + 2 chairs</td>
                                             <td>1 table + 3 chairs</td>
                                             <td>1 table + 3 chairs</td>
@@ -1520,9 +1467,9 @@
                                             <td class="feature-name">Banner Spaces</td>
                                             <td>1</td>
                                             <td>2</td>
-                                            <td>Custom sock banners</td>
-                                            <td>Custom sock banners</td>
-                                            <td>Banner Wall</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>2 + Banner Wall</td>
                                         </tr>
                                         <tr>
                                             <td class="feature-name">Delegate Passes</td>
@@ -1660,7 +1607,7 @@
                                             </div>
                                         </div>
                                         <p class="addon-description">
-                                            Your logo on every delegate lanyard and name badge. Maximum visibility throughout the entire event day.
+                                            Your logo on every delegate lanyard. Maximum visibility throughout the entire event day.
                                         </p>
                                         <div class="addon-includes">
                                             <strong>Includes:</strong> 1 delegate pass
