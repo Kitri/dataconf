@@ -85,14 +85,13 @@
 
                 <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                     <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="speakers.html">Speakers</a></li>
                     <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="sponsorship.html">Sponsorship</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="dataconfprevious.html">Previous Events</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="interest.html">Interested</a></li> -->
                     <!-- <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="callforspeakers.html">Call for Speakers</a></li> -->
-                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="speakers.html">Our Speakers</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="agenda2024.html">Agenda</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="feedback.html" target="_blank">Feedback</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="dataconf2023.html">DataConf 2025</a></li>
                 </ul>
-                <!-- <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://www.quicket.co.za/events/252855-dataconf-2024/" target="_blank">Buy Tickets</a></div> -->
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://www.quicket.co.za/events/318000-dataconf-2025/" target="_blank">Buy Tickets</a></div>
                 
             </div>
         </div>
@@ -104,7 +103,25 @@
             <div class="counter-container col-md-12 col-lg-10">
                 <div>
                 <h4 class="mbr-section-title mbr-fonts-style mb-4 display-2 align-center"><a id="Speakers">Our Speakers</a></h4>
-                <h5 class="mbr-fonts-style align-center">Click on the speakers to see their talk details and bio </h5>
+                <h5 class="mbr-fonts-style align-center mb-4">Click on the speakers to see their talk details and bio</h5>
+                <style>
+                  .card:hover {
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+                  }
+                  .speakers .card {
+                    min-height: 180px;
+                  }
+                  .card-title {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                  }
+                  .badge-warning {
+                    background-color: #ffc107 !important;
+                    color: #212529 !important;
+                  }
+                </style>
 </div>
                 <br />
                     <div class="row">
@@ -129,20 +146,24 @@
 
     function add_keynote(first_name, speaker) {
         const keynote_row = document.createElement('div')
-        keynote_row.className = 'row speakers'
+        keynote_row.className = 'row speakers mb-4'
 
         keynote_row.innerHTML = `
-             <div class="col-md-3">
+             <div class="col-md-1">
                 </div>
-             <div class="col-md-6">
-                 <a href="#" data-toggle="modal" data-target="#speakerModal${first_name}" >
-                 <img src="assets/images/speakers_2024/speaker_${first_name.toLowerCase()}.png" style="width: 40%; margin: auto" alt="${speaker.name}"/>
-                 <strong style="font-size: 18pt">${speaker.name}</strong><br />
-                 </a>
-                 <strong> Keynote</strong> <br />
-             ${speaker.title}
+             <div class="col-md-10">
+                 <div class="card border-warning" style="background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); box-shadow: 0 6px 25px rgba(255,193,7,0.3); border: 2px solid #ffc107; border-radius: 15px;">
+                   <div class="card-body text-center p-3">
+                     <a href="#" data-toggle="modal" data-target="#speakerModal${first_name}" style="text-decoration: none; color: inherit;">
+                       <span class="badge badge-warning mb-3" style="font-size: 16px; padding: 10px 20px; font-weight: 600;">🎤 KEYNOTE SPEAKER</span>
+                       <h3 class="card-title text-dark mb-2" style="font-weight: 700; font-size: 22px; line-height: 1.2;">${speaker.title}</h3>
+                       <h5 class="card-subtitle text-primary mb-2" style="font-weight: 500; font-size: 18px;">${speaker.name}</h5>
+                       <p class="card-text text-muted mb-0" style="font-size: 16px; font-style: italic;">Click to discover more about this keynote</p>
+                     </a>
+                   </div>
+                 </div>
              </div>
-             <div class="col-md-3">
+             <div class="col-md-1">
                 </div>
         `
 
@@ -161,15 +182,24 @@
             continue
         }
         const card = document.createElement('div');
-        card.className = 'col-md-3';
+        card.className = 'col-md-6 col-lg-4';
         card.style = 'padding-top: 2em'
+        
+        // Alternate background colors for better visual separation
+        const isEven = i % 2 === 0;
 
         card.innerHTML = `
-                <a href="#" data-toggle="modal" data-target="#speakerModal${first_name}" >
-                <img src="assets/images/speakers_2024/speaker_${first_name.toLowerCase()}.png" style="width: 80%; margin: auto" alt="${speaker.name}"/>
-                <strong>${speaker.name}</strong><br />
-                </a>
-                ${speaker.title}
+                <div class="card h-100" style="background: ${isEven ? 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)' : 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)'}; box-shadow: 0 3px 12px rgba(0,0,0,0.08); border: none; border-radius: 12px; transition: all 0.3s ease; min-height: 180px;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 3px 12px rgba(0,0,0,0.08)'">
+                  <div class="card-body d-flex flex-column p-3" style="padding: 18px !important;">
+                    <a href="#" data-toggle="modal" data-target="#speakerModal${first_name}" style="text-decoration: none; color: inherit; flex: 1; display: flex; flex-direction: column;">
+                      <h4 class="card-title text-dark mb-2" style="font-weight: 600; font-size: 18px; line-height: 1.3; flex-grow: 1;">${speaker.title}</h4>
+                      <div class="mt-auto">
+                        <p class="card-subtitle text-primary mb-1" style="font-weight: 600; font-size: 18px; margin-bottom: 4px;">${speaker.name}</p>
+                        <small class="text-muted" style="font-size: 13px; font-style: italic; margin-top: 2px;">Click to learn more</small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
         `;
 
         // if(i <= 6) {
@@ -188,80 +218,15 @@
     
 <div class="images-container container">
     <div class="mbr-section-head">
-        <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-1">
+        <h4 class="mbr-section-title mbr-fonts-style align-center mb-4 display-1">
             <strong><a id="Sponsors">Our Sponsors</a></strong>
         </h4>
-
-        <hr style="color: white" />
-        <div class="mbr-section-head">
-            <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-2">Gold</h5>
-        </div>
-        <hr style="color: white" />
         <div class="row justify-content-center mt-4">
-            <div class="col-md-3 card gold">
-                <a href="https://www.equalexperts.com/" target="_blank">
-                    <img src="assets/images/equalexperts.png" alt="Equal Experts" style="width: 80%">
-                </a>
-            </div>
-        </div>
-        <hr style="color: white" />
-        <div class="mbr-section-head">
-            <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-2">Silver</h5>
-            <hr style="color: white" />
-        </div>
-        <div class="row justify-content-center mt-4">
-            <!-- <div class="col-md-2 card media"> </div> -->
-            <div class="col-md-4 card media">
-                <a href="https://www.overdrive.co.za/" target="_blank">
-                    <img src="assets/images/silicon_overdrive.png" alt="Silicon Overdrive" style="width: 40%; ">
-                </a>
-            </div>
-            <!-- <div class="col-md-4 card media">
-                <a href="https://www.capetown.gov.za/" target="_blank">
-                <img src="assets/images/city_of_cape_town.png" alt="City of Cape Town" >
-                </a>
-            </div>
-            <div class="col-md-2 card media"> </div> -->
-            <div class="col-md-4 card media">
+            <div class="col-md-4 text-center">
                 <a href="https://www.offerzen.com/" target="_blank">
-                    <img src="assets/images/offerzen white.png" alt="Symbyte" style="width: 40%; margin-top: 10%">
+                    <img src="assets/images/offerzen white.png" alt="OfferZen" style="max-width: 200px; height: auto;">
                 </a>
             </div>
-            <div class="col-md-4 card media">
-                <a href="https://www.x-idian.com/" target="_blank">
-                    <img src="assets/images/x-idian.png" alt="X-idian" style="width: 40%;margin-top:10%">
-                </a>
-            </div>
-            <div class="col-md-4 card media">
-                <a href="https://www.capetown.gov.za/" target="_blank">
-                <img src="assets/images/city_of_cape_town.png" alt="City of Cape Town" >
-                </a>
-            </div>
-        </div>
-        <hr style="color: white" />
-    </div>
-    <div class="mbr-section-head">
-        <h6 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-6 green">Speakers Dinner</h6>
-
-        <hr style="color: white" />
-    </div>
-    <div class="row justify-content-center mt-4">
-        <div class="col-md-6 card media">
-            <a href="https://symbyte.tech/" target="_blank">
-                <img src="assets/images/symbyte-logo-large.png" alt="Symbyte" style="width: 30%">
-            </a>
-        </div>
-    </div>
-    <hr style="color: white" />
-    <div class="mbr-section-head">
-        <h6 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-6 green">Industry Partner</h6>
-        <hr style="color: white" />
-    </div>
-    <div class="row justify-content-center mt-4">
-        <div class="col-md-6 card media">
-            <a href="https://www.iitpsa.org.za/" target="_blank">
-                <img src="assets/images/IITPSA-logo.png" alt="IITPSA" style="width: 20%">
-            </a>
         </div>
     </div>
 </div>
@@ -309,8 +274,7 @@
                       <hr />
                     <br />
                     <div class="row">
-                      <div class="col-md-2 modal-img"> IMG </div>
-                      <div class="col-md-10 modal-speaker-bio"> BIO
+                      <div class="col-md-12 modal-speaker-bio"> BIO
                       </div>
                     </div>
         </div>
