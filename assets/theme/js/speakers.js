@@ -1,9 +1,9 @@
 var modalData = [
 {
     name: "Melissa Albeldas",
-    bio: "Passionate data scientist and rock climber.. ",
+    bio: "Passionate data scientist, rock climber, and metalhead on a mission to make the world a better place",
     title: "Climbing Out of Burnout: Lessons from Indoor Rock Climbing, MLOps, and the Data Science Lifecycle",
-    talk: "This talk is going to cover a really important topic in tech...burnout. I will use MLOps and Indoor Rock climbing as 2 metaphors for burnout and then talk about how AI can be used to help with MLOps, rock climbing, and burnout. Part 1 will cover burnout and how it appears in humans, part 2 will cover how we see it in other areas MLOps/climbing, and part 3 will cover how we can incorporate AI to help us with MLOps and burnout too.",
+    talk: "Burnout happens when your system (human or machine) runs at near maximum capacity for too long without the right safeguards. In this talk, we’ll see what rock climbing can teach us about burnout and MLOps. In part 1 we will discuss burnout in humans and in part 2 we will discover the parallels in MLOps - and how we can use AI to combat burnout in both!",
     tracks: "AI (Including GenAI), Data Science, Data Visualisation, Data Ops, Data Ethics"
 },
 {
