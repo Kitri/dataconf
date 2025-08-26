@@ -50,10 +50,9 @@ var modalData = [
 },
 {
     name: "Carike Blignaut-Staden",
-    // bio: "Carike Blignaut-Staden has a passion for using technology to help others. She is a DevOps engineer at OUTsurance and co-organiser of the JHBMSDUG developer community. Continuously improving and broadening her skillset, she holds multiple certifications from various disciplines such as AI, Cloud technologies, Cybersecurity, DevOps, IoT, and Site Reliability Engineering. Away from the keyboard she loves playing sports, fishing and just being in nature. She is a former provincial hockey player and national karateka. Dedicated to helping others upskill and sharing her knowledge. Connect with her on LinkedIn (https://www.linkedin.com/in/carike) or X (@CarikeBStaden)",
-    bio: "Bio coming soon",
+    bio: "Away from the keyboard she loves playing sports, fishing and just being in nature. She is a former provincial hockey player and national karateka. Dedicated to helping others upskill and sharing her knowledge. Connect with her on LinkedIn (https://www.linkedin.com/in/carike) or X (@CarikeBStaden)",
     title: "Observability as a team sport : Designing for humans, not just metrics",
-    talk: "In a world overflowing with dashboards, why do so many go unused? This talk explores how observability is not just a DevOps concern but a collaborative effort across teams. We'll dive into the principles of designing dashboards that are not only functional but also accessible, inclusive, and actionable. Learn how to build visualizations that serve real user needs, foster shared ownership, and drive better decision-making across your organization.",
+    talk: "In a world overflowing with dashboards, why do so many go unused? This talk explores how observability is not just a DevOps concern but a collaborative effort across teams. We'll dive into the principles of designing dashboards that are not only functional but also accessible, inclusive, and actionable. Learn how to build visualizations that serve real user needs, foster shared ownership, and drive better decision-making across your organization. Carike Blignaut-Staden has a passion for using technology to help others. She is a DevOps engineer at OUTsurance and co-organiser of the JHBMSDUG developer community. Continuously improving and broadening her skillset, she holds multiple certifications from various disciplines such as AI, Cloud technologies, Cybersecurity, DevOps, IoT, and Site Reliability Engineering.",
     tracks: "Business Intelligence, Data Visualisation, Other"
 },
 {
