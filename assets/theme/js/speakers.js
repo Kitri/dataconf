@@ -82,6 +82,10 @@ var modalData = [
 $(document).ready(function() {
   for (var i = 0; i < modalData.length; i++) {
     var first_name = modalData[i].name.split(' ')[0]
+    // Special case for Dr. Jay van Zyl to use "Jay" for modal ID
+    if (modalData[i].name === "Dr. Jay van Zyl") {
+      first_name = "Jay"
+    }
     var modal = $("#speakerModal").clone(); 
     var speaker_html = "<h5>" + modalData[i].name + "</h5>" + modalData[i].bio 
     modal.attr("id", "speakerModal" + first_name); 
