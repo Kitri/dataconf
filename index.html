@@ -297,43 +297,205 @@
 
 
     <section data-bs-version="5.1" class="clients1 cid-tMwvBdCnKJ" id="clients1-10">
-        <div class="images-container container">
-            <div class="mbr-section-head">
-                <h4 class="mbr-section-title mbr-fonts-style align-center mb-4 display-1">
-                    <strong><a id="Sponsors">Our Sponsors</a></strong>
-                </h4>
+    
+<div class="images-container container">
+    <div class="mbr-section-head">
+        <h4 class="mbr-section-title mbr-fonts-style align-center mb-5 display-1">
+            <strong><a id="Sponsors">Our Sponsors</a></strong>
+        </h4>
+        
+        <style>
+            .sponsor-tier {
+                margin-bottom: 4rem;
+                position: relative;
+            }
+            
+            .sponsor-tier:first-child {
+                margin-top: 2rem;
+                padding-top: 1rem;
+            }
+            
+            .sponsor-card {
+                background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+                border: 1px solid rgba(255,255,255,0.15);
+                border-radius: 20px;
+                padding: 2rem;
+                margin: 1rem;
+                transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                position: relative;
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+            
+            .sponsor-card:hover {
+                transform: translateY(-8px);
+                border-color: rgba(247, 147, 30, 0.4);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.15), 0 0 0 1px rgba(247, 147, 30, 0.1);
+            }
+            
+            .sponsor-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(247, 147, 30, 0.1), transparent);
+                transition: left 0.6s;
+            }
+            
+            .sponsor-card:hover::before {
+                left: 100%;
+            }
+            
+            .premium-badge {
+                background: linear-gradient(135deg, #f7931e, #84a800);
+                color: white;
+            }
+            
+            .tier-badge {
+                display: inline-block;
+                padding: 8px 24px;
+                border-radius: 25px;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 2rem;
+                position: relative;
+            }
+            
+            .growth-badge {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+            }
+            
+            .starter-badge {
+                background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+                color: white;
+            }
+            
+            .feature-badge {
+                background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+                color: #8B4513;
+            }
+            
+            .sponsor-logo {
+                transition: all 0.3s ease;
+                filter: brightness(1);
+            }
+            
+            .sponsor-card:hover .sponsor-logo {
+                filter: brightness(1.1);
+                transform: scale(1.05);
+            }
+            
+            .feature-note {
+                background: rgba(247, 147, 30, 0.1);
+                border: 1px solid rgba(247, 147, 30, 0.2);
+                border-radius: 10px;
+                padding: 8px 16px;
+                margin-top: 1rem;
+                font-size: 13px;
+                color: #f7931e;
+                font-weight: 500;
+            }
+            
+            @media (max-width: 768px) {
+                .sponsor-card {
+                    margin: 0.5rem;
+                    padding: 1.5rem;
+                }
                 
-                <!-- Premium Sponsor -->
-                <div class="row justify-content-center mt-2 mb-1">
-                    <div class="col-md-4 text-center">
-                        <p class="text-center mb-2" style="color: gray; font-size: 30px; ">Premium Sponsor:</p>
-                        <a href="https://www.sandtech.com/" target="_blank">
-                            <img src="assets/images/sand logo.png" alt="Sand Technologies" style="max-width: 300px; height: auto;">
-                        </a>
-                    </div>
+                .tier-badge {
+                    font-size: 12px;
+                    padding: 6px 18px;
+                }
+            }
+        </style>
+        
+        <!-- Premium Sponsor - Top Center -->
+        <div class="sponsor-tier">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <span class="tier-badge premium-badge">★ Premium Sponsor</span>
                 </div>
-                
-                <div class="row justify-content-center mt-4">
-                    <div class="col-md-4 text-center">
-                        <a href="https://www.offerzen.com/" target="_blank">
-                            <img src="assets/images/offerzen white.png" alt="OfferZen" style="max-width: 250px; height: auto;">
-                        </a>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <a href="https://ttdconsulting.net/" target="_blank">
-                            <img src="assets/images/ttd_logo.png" alt="TTD Consulting" style="max-width: 180px; height: auto;">
-                        </a>
-                        <p class="text-center mt-2" style="color: #666; font-size: 14px; font-style: italic;">Notebooks and pens sponsor</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <a href="https://www.x-idian.com/" target="_blank">
-                            <img src="assets/images/x-idian.png" alt="X-idian" style="max-width: 150px; height: auto;">
+                <div class="col-lg-6 col-md-8">
+                    <div class="sponsor-card text-center">
+                        <a href="https://www.sandtech.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                            <img src="assets/images/sand logo.png" alt="Sand Technologies" class="sponsor-logo" style="max-width: 240px; height: auto;">
                         </a>
                     </div>
                 </div>
             </div>
-
         </div>
+        
+        <!-- Growth & Starter Tier - Hybrid Layout -->
+        <div class="sponsor-tier">
+            <div class="row justify-content-center align-items-center">
+                <!-- Growth Sponsor - Left Side -->
+                <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                    <div class="text-center mb-3">
+                        <span class="tier-badge growth-badge">Growth Sponsor</span>
+                    </div>
+                    <div class="sponsor-card text-center" style="padding: 3rem;">
+                        <a href="https://www.devconf.co.za/" target="_blank" style="text-decoration: none; color: inherit;">
+                            <img src="assets/images/devconf_logo.png" alt="DevConf" class="sponsor-logo" style="max-width: 260px; height: auto;">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Divider for larger screens -->
+                <div class="col-lg-2 d-none d-lg-block text-center">
+                    <div style="height: 100px; width: 2px; background: linear-gradient(to bottom, transparent, rgba(247, 147, 30, 0.3), transparent); margin: 0 auto;"></div>
+                </div>
+                
+                <!-- Starter Sponsors - Right Side Stacked -->
+                <div class="col-lg-5 col-md-12">
+                    <div class="text-center mb-3">
+                        <span class="tier-badge starter-badge">Starter Sponsors</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="sponsor-card text-center" style="padding: 1.5rem;">
+                                <a href="https://www.offerzen.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                                    <img src="assets/images/offerzen white.png" alt="OfferZen" class="sponsor-logo" style="max-width: 180px; height: auto;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="sponsor-card text-center" style="padding: 1.5rem;">
+                                <a href="https://www.x-idian.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                                    <img src="assets/images/x-idian.png" alt="X-idian" class="sponsor-logo" style="max-width: 180px; height: auto;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Feature Branding Sponsors - Bottom Center -->
+        <div class="sponsor-tier">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <span class="tier-badge feature-badge">Feature Branding Sponsors</span>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="sponsor-card text-center" style="padding: 1.5rem;">
+                        <a href="https://ttdconsulting.net/" target="_blank" style="text-decoration: none; color: inherit;">
+                            <img src="assets/images/ttd_logo.png" alt="TTD Consulting" class="sponsor-logo" style="max-width: 180px; height: auto;">
+                            <p style="color: white">
+                                Notebooks & Pens
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
         <div class="container">
             <div class="mbr-section-btn align-center">
                 <p class="mbr-white font-light display-5"> If you want to be involved, check out our sponsorship
