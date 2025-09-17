@@ -83,6 +83,13 @@ var modalData = [
     title: "AI in the Wild: Digital Twins and the Messy Reality of Scale",
     talk: "Everyone talks about AI changing industries, but what happens when you actually have to deploy it across a country's telecom network? From 3D digital twins that shape fibre roll-outs to optimisation models that tell operators how to tilt antennas, this talk shows AI out in the wild. It's the messy reality - no sandbox, no perfect ground truth - just engineers and data scientists trying to keep millions connected. Along the way, we'll pull lessons from telco, healthcare, utilities, and smart cities on what it really takes to make AI work at scale.",
     tracks: "AI (Applied AI, Telecom), Geospatial Analytics, Optimisation, Real-World ML Ops"
+},
+{
+    name: "Mini open space",
+    bio: "Facilitated by Mercia Malan",
+    title: "Mini open space",
+    talk: "No slides, just real conversation (ok maybe 1 slide :D ). An open discussion space, generating topics from the people in the room and discussing in small groups.<br><br><strong>Format:</strong><br>5 minutes - generate topics<br>25 - 30 minutes - discuss in groups<br>5 - 10 minutes - summarise and capture takeaways",
+    tracks: "Interactive Session, Networking, Open Discussion"
 }
 ];
 
