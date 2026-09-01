@@ -1,0 +1,204 @@
+{
+ "identity": "mercia",
+ "exported_at": "2026-09-01T13:30:26.635Z",
+ "reviews": {
+  "1": {
+   "familiarity": "known_good",
+   "title": 8,
+   "talk": 8,
+   "shortlist": true,
+   "why": "James prefers this one"
+  },
+  "2": {
+   "familiarity": "think_good",
+   "title": 8,
+   "talk": 8,
+   "shortlist": true,
+   "why": "sounds fun! only problem is then we have 3 cobalt analytics people.. I can ask James so the 3 of them can rock paper scissors for it"
+  },
+  "3": {
+   "familiarity": "think_good",
+   "title": 8,
+   "talk": 8,
+   "shortlist": true,
+   "why": "Love the analogy"
+  },
+  "4": {
+   "familiarity": "known_good",
+   "title": 7,
+   "talk": 8,
+   "shortlist": false,
+   "why": "This is one of my soap boxes..."
+  },
+  "5": {
+   "familiarity": "known_good",
+   "title": 6,
+   "talk": 8,
+   "shortlist": true,
+   "why": "sounds insightful"
+  },
+  "6": {
+   "familiarity": "known_good",
+   "title": 7,
+   "talk": 7,
+   "shortlist": true,
+   "why": "Probably a pain point for many"
+  },
+  "7": {
+   "familiarity": "think_good",
+   "title": 7,
+   "talk": 7,
+   "shortlist": false,
+   "why": "He wants to sponsor next year, so this is also a good strategic choice"
+  },
+  "8": {
+   "familiarity": "unknown",
+   "title": 8,
+   "talk": 8,
+   "shortlist": true,
+   "why": "Sounds like a really good real-life story"
+  },
+  "9": {
+   "familiarity": "unknown",
+   "title": 8,
+   "talk": 8,
+   "shortlist": true,
+   "why": "Really thorough description and sounds well thought out"
+  },
+  "10": {
+   "familiarity": "unknown",
+   "title": 7,
+   "talk": 8,
+   "shortlist": false,
+   "why": "This is a real problem, hearing a solution that works sounds valuable - but I'm not sure if he has the experience to back this? Only 1 year experience as a junior?"
+  },
+  "11": {
+   "familiarity": "unknown",
+   "title": 8,
+   "talk": 7,
+   "shortlist": true,
+   "why": "sounds cool"
+  },
+  "12": {
+   "familiarity": "think_good",
+   "title": 7,
+   "talk": 7,
+   "shortlist": false,
+   "why": "interesting angle"
+  },
+  "13": {
+   "familiarity": "known_good",
+   "title": 8,
+   "talk": 7,
+   "shortlist": false,
+   "why": ""
+  },
+  "14": {
+   "familiarity": "think_good",
+   "title": 6,
+   "talk": 7,
+   "shortlist": true,
+   "why": ""
+  },
+  "15": {
+   "familiarity": "unknown",
+   "title": 7,
+   "talk": 8,
+   "shortlist": false,
+   "why": "Torn between her 2 talks, this story got me hooked"
+  },
+  "16": {
+   "familiarity": "known_good",
+   "title": 7,
+   "talk": 6,
+   "shortlist": false,
+   "why": "Same as last year, talking about his book (different one)"
+  },
+  "17": {
+   "speaker_note": "",
+   "title": "7",
+   "talk": "7",
+   "decision": "",
+   "why": "The description mentions \"this keynote....\" - could this be considered for keynote? It sounds a bit technical for a keynote",
+   "familiarity": "think_good",
+   "shortlist": true
+  },
+  "18": {
+   "familiarity": "think_good",
+   "title": 5,
+   "talk": 6,
+   "shortlist": false,
+   "why": ""
+  },
+  "19": {
+   "familiarity": "known_good",
+   "title": 5,
+   "talk": 6,
+   "shortlist": false,
+   "why": "Didn't get a great rating last year and needs to travel internationally"
+  },
+  "20": {
+   "familiarity": "unknown",
+   "title": 5,
+   "talk": 7,
+   "shortlist": false,
+   "why": ""
+  },
+  "21": {
+   "familiarity": "unknown",
+   "title": 5,
+   "talk": 7,
+   "shortlist": false,
+   "why": "Speaker in senegal, would need to check travel"
+  },
+  "22": {
+   "familiarity": "unknown",
+   "title": 6,
+   "talk": 6,
+   "shortlist": false,
+   "why": "Not a lot of information in the description"
+  },
+  "23": {
+   "familiarity": "unknown",
+   "title": 5,
+   "talk": 7,
+   "shortlist": false,
+   "why": "Sounds valuable"
+  },
+  "24": {
+   "familiarity": "unknown",
+   "title": 5,
+   "talk": 6,
+   "shortlist": false,
+   "why": "Travelling from nigeria - said he'll cover his own flights"
+  },
+  "25": {
+   "familiarity": "unknown",
+   "title": 4,
+   "talk": 7,
+   "shortlist": true,
+   "why": "Travelling from nigeria - said he'll cover his own flights"
+  },
+  "26": {
+   "familiarity": "unknown",
+   "title": 5,
+   "talk": 5,
+   "shortlist": false,
+   "why": "From Nigeria.. not sure if she will travel own expenses"
+  },
+  "27": {
+   "familiarity": "unknown",
+   "title": 7,
+   "talk": 2,
+   "shortlist": false,
+   "why": "Software engineering topic?"
+  },
+  "28": {
+   "familiarity": "unknown",
+   "title": 4,
+   "talk": 2,
+   "shortlist": false,
+   "why": "Software engineering topic?"
+  }
+ }
+}
