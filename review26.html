@@ -2067,6 +2067,13 @@ document.getElementById('importFile').addEventListener('change', e => {
 // save instantly to each browser's own storage on top of this baseline.
 let REMOTE = { mercia: null, candice: null };
 async function loadRemoteReviews(){
+  const status = document.getElementById('syncStatus');
+  // Opened directly as a file:// page (double-clicked, not served over http),
+  // browsers block fetch() to sibling files here — nothing will ever load this way.
+  if (location.protocol === 'file:') {
+    if (status) status.textContent = 'Opened as a local file — browsers block loading reviews-*.json this way. Use Import above to load a review file instead, or view this page over http(s).';
+    return;
+  }
   const ids = ['mercia', 'candice'];
   const results = await Promise.all(ids.map(async id => {
     try {
@@ -2078,10 +2085,11 @@ async function loadRemoteReviews(){
   REMOTE.mercia = results[0];
   REMOTE.candice = results[1];
   const found = ids.filter((id,i) => results[i]);
-  const status = document.getElementById('syncStatus');
+  const missing = ids.filter((id,i) => !results[i]);
   if (status) {
     status.textContent = found.length
       ? `Loaded saved reviews: ${found.map(f => f==='mercia'?'Mercia':'Candice').join(', ')}`
+        + (missing.length ? ` (no reviews-${missing.join('.json / reviews-')}.json found yet — that reviewer's own live edits, if any, still show)` : '')
       : 'No saved review files yet — Save a file above, then commit it as reviews-mercia.json / reviews-candice.json';
   }
 }

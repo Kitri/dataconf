@@ -1,12 +1,12 @@
 {
  "identity": "mercia",
- "exported_at": "2026-09-01T14:14:18.658Z",
+ "exported_at": "2026-09-01T15:04:21.151Z",
  "reviews": {
   "1": {
    "familiarity": "known_good",
    "title": 8,
    "talk": 8,
-   "shortlist": true,
+   "shortlist": false,
    "why": "James prefers this one"
   },
   "2": {
@@ -62,7 +62,7 @@
    "familiarity": "unknown",
    "title": 8,
    "talk": 8,
-   "shortlist": true,
+   "shortlist": false,
    "why": "Really thorough description and sounds well thought out"
   },
   "10": {
@@ -90,7 +90,7 @@
    "familiarity": "known_good",
    "title": 8,
    "talk": 7,
-   "shortlist": false,
+   "shortlist": true,
    "why": ""
   },
   "14": {
@@ -104,14 +104,14 @@
    "familiarity": "unknown",
    "title": 7,
    "talk": 8,
-   "shortlist": false,
+   "shortlist": true,
    "why": "Torn between her 2 talks, this story got me hooked"
   },
   "16": {
    "familiarity": "known_good",
    "title": 7,
    "talk": 6,
-   "shortlist": false,
+   "shortlist": true,
    "why": "Same as last year, talking about his book (different one)"
   },
   "17": {
@@ -162,14 +162,14 @@
    "familiarity": "unknown",
    "title": 5,
    "talk": 7,
-   "shortlist": false,
+   "shortlist": true,
    "why": "Sounds valuable"
   },
   "24": {
    "familiarity": "think_good",
    "title": "7",
    "talk": "7",
-   "shortlist": true,
+   "shortlist": false,
    "why": "Travelling from nigeria - said he'll cover his own flights"
   },
   "25": {
