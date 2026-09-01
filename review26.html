@@ -221,8 +221,8 @@
     <div class="filter-row">
       <input type="text" id="search" placeholder="Search by name, title or keyword…">
       <select id="sortsel">
-        <option value="shortlist_desc">Sort: shortlist agreement</option>
-        <option value="fw_desc">Sort: AI score</option>
+        <option value="shortlist_desc">Sort: Mercia's priority (default)</option>
+        <option value="fw_desc">Sort: AI score (informational)</option>
         <option value="mercia_desc">Sort: Mercia's score</option>
         <option value="candice_desc">Sort: Candice's score</option>
         <option value="az">Sort: A–Z (title)</option>
@@ -1932,8 +1932,10 @@ function handleFieldChange(e){
 }
 
 // ---------- Main render ----------
-function shortlistCount(t){
-  return (AI_SHORTLIST.has(t.id)?1:0) + (isShortlisted('mercia',t)?1:0) + (isShortlisted('candice',t)?1:0);
+// Human agreement count (Mercia + Candice only) — the AI score is informational
+// and deliberately excluded from every default ranking/sorting below.
+function humanShortlistCount(t){
+  return (isShortlisted('mercia',t)?1:0) + (isShortlisted('candice',t)?1:0);
 }
 function passesFilters(t){
   if (filterMercia && !isShortlisted('mercia', t)) return false;
@@ -1951,7 +1953,22 @@ function passesFilters(t){
 function sortTalks(list){
   const mode = document.getElementById('sortsel').value;
   const copy = list.slice();
-  if (mode === 'shortlist_desc') copy.sort((a,b) => shortlistCount(b) - shortlistCount(a));
+  if (mode === 'shortlist_desc') copy.sort((a,b) => {
+    // AI score is informational only — never used in default ranking.
+    // Mercia's own shortlist pick and score take priority, then Candice's.
+    const msA = isShortlisted('mercia',a) ? 1 : 0;
+    const msB = isShortlisted('mercia',b) ? 1 : 0;
+    if (msA !== msB) return msB - msA;
+    const mA = reviewTotal(getReview('mercia',a));
+    const mB = reviewTotal(getReview('mercia',b));
+    if (mB !== mA) return mB - mA;
+    const csA = isShortlisted('candice',a) ? 1 : 0;
+    const csB = isShortlisted('candice',b) ? 1 : 0;
+    if (csA !== csB) return csB - csA;
+    const cA = reviewTotal(getReview('candice',a));
+    const cB = reviewTotal(getReview('candice',b));
+    return cB - cA;
+  });
   else if (mode === 'fw_desc') copy.sort((a,b) => (b.framework_review?b.framework_review.total:-1) - (a.framework_review?a.framework_review.total:-1));
   else if (mode === 'mercia_desc') copy.sort((a,b) => reviewTotal(getReview('mercia',b)) - reviewTotal(getReview('mercia',a)));
   else if (mode === 'candice_desc') copy.sort((a,b) => reviewTotal(getReview('candice',b)) - reviewTotal(getReview('candice',a)));
