@@ -159,31 +159,36 @@
     </div>
 </section>
 
-<script src="assets/theme/js/speakers.js"></script>  
+<script src="assets/theme/js/speakers_2026.js"></script>
 <script>
     // Get the container element
     const container = document.getElementById('container-speaker');
 
     const row_card = document.createElement('div')
     row_card.className = 'row speakers'
-    
-    const row_card2 = document.createElement('div')
-    row_card2.className = 'row speakers'
 
-    function add_keynote(first_name, speaker) {
+    const placeholderPhoto = (size) => `
+        <div style="width:${size}; aspect-ratio:1/1; margin: 0 auto 20px; border-radius:50%; background:#f0f0f0; border:2px dashed #ccc; display:flex; align-items:center; justify-content:center; font-size:13px; color:#999; text-align:center;">
+            Photo<br>TBC
+        </div>`
+
+    function add_keynote(speaker) {
         const keynote_row = document.createElement('div')
         keynote_row.className = 'row speakers mb-4'
+
+        const img = speaker.photo
+            ? `<img src="assets/images/speakers_2026/${speaker.photo}" alt="${speaker.name}" style="width: 40%; border-radius: 50%; margin-bottom: 20px;" />`
+            : placeholderPhoto('40%')
 
         keynote_row.innerHTML = `
              <div class="col-md-2">
                 </div>
              <div class="col-md-8">
                  <div class="speaker-card" style="background: linear-gradient(135deg, rgba(247, 147, 30, 0.1) 0%, rgba(132, 168, 0, 0.1) 100%); border: 2px solid rgb(247, 147, 30); border-radius: 15px;">
-                     <a href="#" data-toggle="modal" data-target="#speakerModalJay" style="text-decoration: none; color: inherit;">
+                     <a href="#" data-toggle="modal" data-target="#speakerModal${speaker.id}" style="text-decoration: none; color: inherit;">
                        <span class="badge mb-3" style="font-size: 18px; padding: 12px 25px; font-weight: 700; background-color: rgb(247, 147, 30); color: white;">🎤 KEYNOTE SPEAKER</span>
-                       <img src="assets/images/speakers_2025/speaker_jay.png" alt="${speaker.name}" style="width: 40%; border-radius: 50%; margin-bottom: 20px;" />
+                       ${img}
                        <h4 style="font-weight: 700; font-size: 24px;">${speaker.name}</h4>
-                       <h6 style="font-size: 14px; color: rgb(132, 168, 0); font-weight: 600; margin: 5px 0;">🇺🇸 CEO ecosystem.Ai • Computational Social Scientist</h6>
                        <h5 style="font-size: 18px; color: #2c3e50; font-weight: 500;">${speaker.title}</h5>
                      </a>
                  </div>
@@ -196,35 +201,36 @@
     }
 
     for(i = 0; i < modalData.length; i++) {
-        // if(i == 6) {
-        //     container.appendChild(row_card)
-        // }
         speaker = modalData[i]
-        var first_name = speaker.name.split(' ')[0]
+        // Skip TBC placeholders (keynote/unconfirmed speaker/panel) on the public speakers page.
+        // They still have modals generated (for the agenda page) - just not shown as cards here.
+        // Once a placeholder is confirmed and its `tbc` flag is removed in speakers_2026.js, it
+        // will start appearing here automatically.
+        if(speaker.tbc) {
+            continue
+        }
         if(speaker.is_keynote) {
-            keynote_row = add_keynote(first_name, speaker)
-            container.appendChild(keynote_row)
+            container.appendChild(add_keynote(speaker))
             continue
         }
         const card = document.createElement('div');
         card.className = 'col-md-6 col-lg-4';
-        
+
+        const img = speaker.photo
+            ? `<img src="assets/images/speakers_2026/${speaker.photo}" alt="${speaker.name}" />`
+            : placeholderPhoto('60%')
+
         card.innerHTML = `
                 <div class="speaker-card">
-                    <a href="#" data-toggle="modal" data-target="#speakerModal${first_name}" style="text-decoration: none; color: inherit;">
-                        <img src="assets/images/speakers_2025/speaker_${first_name.toLowerCase()}.png" alt="${speaker.name}" />
+                    <a href="#" data-toggle="modal" data-target="#speakerModal${speaker.id}" style="text-decoration: none; color: inherit;">
+                        ${img}
                         <h4>${speaker.name}</h4>
                         <h5>${speaker.title}</h5>
                     </a>
                 </div>
         `;
 
-        // if(i <= 6) {
-            row_card.appendChild(card);
-        // }
-        // else {
-        //     row_card2.appendChild(card)
-        // }
+        row_card.appendChild(card);
     }
 
     container.appendChild(row_card)
@@ -348,82 +354,41 @@
             }
         </style>
         
-        <!-- Premium Sponsor - Top Center -->
+        <!-- Sponsors: kept in sync with index.html -->
+        <p class="mbr-white align-center font-light display-5" style="margin-bottom: 1.4rem;">Thank you to our sponsors confirmed so far for DataConf 2026!</p>
+
+        <!-- Premium Sponsor -->
         <div class="sponsor-tier">
+            <div class="align-center"><span class="tier-badge premium-badge">Premium Sponsor</span></div>
             <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <span class="tier-badge premium-badge">★ Premium Sponsor</span>
+                <div class="col-md-3 sponsor-card align-center">
+                    <a href="https://tihsa.co.za/" target="_blank">
+                        <img src="assets/images/tih_logo.png" alt="Telesure" class="sponsor-logo" style="width: 80%;">
+                    </a>
                 </div>
-                <div class="col-lg-6 col-md-8">
-                    <div class="sponsor-card text-center">
-                        <a href="https://www.sandtech.com/" target="_blank" style="text-decoration: none; color: inherit;">
-                            <img src="assets/images/sand logo.png" alt="Sand Technologies" class="sponsor-logo" style="max-width: 170px; height: auto;">
-                        </a>
-                    </div>
+                <!-- MTN Premium Sponsor: hidden pending MTN brand approval. Re-enable once approved.
+                <div class="col-md-3 sponsor-card align-center">
+                    <a href="https://www.mtn.co.za/" target="_blank">
+                        <img src="assets/images/mtn-logo-yellow-trimmed.png" alt="MTN" class="sponsor-logo" style="width: 90%;">
+                    </a>
                 </div>
+                -->
             </div>
         </div>
-        
-        <!-- Growth & Starter Tier - Hybrid Layout -->
+
+        <!-- Starter Sponsors -->
         <div class="sponsor-tier">
-            <div class="row justify-content-center align-items-center">
-                <!-- Growth Sponsor - Left Side -->
-                <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
-                    <div class="text-center mb-3">
-                        <span class="tier-badge growth-badge">Growth Sponsor</span>
-                    </div>
-                    <div class="sponsor-card text-center" style="padding: 2.1rem;">
-                        <a href="https://www.devconf.co.za/" target="_blank" style="text-decoration: none; color: inherit;">
-                            <img src="assets/images/devconf_logo.png" alt="DevConf" class="sponsor-logo" style="max-width: 180px; height: auto;">
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Divider for larger screens -->
-                <div class="col-lg-2 d-none d-lg-block text-center">
-                    <div style="height: 100px; width: 2px; background: linear-gradient(to bottom, transparent, rgba(247, 147, 30, 0.3), transparent); margin: 0 auto;"></div>
-                </div>
-                
-                <!-- Starter Sponsors - Right Side Stacked -->
-                <div class="col-lg-5 col-md-12">
-                    <div class="text-center mb-3">
-                        <span class="tier-badge starter-badge">Starter Sponsors</span>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="sponsor-card text-center" style="padding: 1.05rem;">
-                                <a href="https://www.offerzen.com/" target="_blank" style="text-decoration: none; color: inherit;">
-                                    <img src="assets/images/offerzen white.png" alt="OfferZen" class="sponsor-logo" style="max-width: 125px; height: auto;">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="sponsor-card text-center" style="padding: 1.05rem;">
-                                <a href="https://www.x-idian.com/" target="_blank" style="text-decoration: none; color: inherit;">
-                                    <img src="assets/images/x-idian.png" alt="X-idian" class="sponsor-logo" style="max-width: 125px; height: auto;">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Feature Partner - Bottom Center -->
-        <div class="sponsor-tier">
+            <div class="align-center"><span class="tier-badge starter-badge">Starter Sponsor</span></div>
             <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <span class="tier-badge feature-badge">Feature Branding Sponsors</span>
+                <div class="col-md-3 sponsor-card align-center">
+                    <a href="https://www.offerzen.com/" target="_blank">
+                        <img src="assets/images/offerzen white.png" alt="OfferZen" class="sponsor-logo" style="width: 55%; margin-top: 8%;">
+                    </a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="sponsor-card text-center" style="padding: 1.05rem;">
-                        <a href="https://ttdconsulting.net/" target="_blank" style="text-decoration: none; color: inherit;">
-                            <img src="assets/images/ttd_logo.png" alt="TTD Consulting" class="sponsor-logo" style="max-width: 125px; height: auto;">
-                            <p style="color: white">
-                                Notebooks & Pens
-                            </p>
-                        </a>
-                    </div>
+                <div class="col-md-3 sponsor-card align-center">
+                    <a href="https://www.x-idian.com/" target="_blank">
+                        <img src="assets/images/x-idian.png" alt="X-idian" class="sponsor-logo" style="width: 55%; margin-top: 8%;">
+                    </a>
                 </div>
             </div>
         </div>
@@ -472,8 +437,11 @@
                     </div>
                       <hr />
                     <br />
-                    <div class="row">
-                      <div class="col-md-12 modal-speaker-bio"> BIO
+                    <div class="row" style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px;">
+                      <div style="flex: 0 0 auto; text-align: center;">
+                        <img class="modal-speaker-photo" src="" alt="" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; display: none;">
+                      </div>
+                      <div style="flex: 1 1 240px;" class="modal-speaker-bio"> BIO
                       </div>
                     </div>
         </div>
