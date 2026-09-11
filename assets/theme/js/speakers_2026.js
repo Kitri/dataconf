@@ -47,6 +47,15 @@ var modalData = [
     photo: "speaker_james.png",
 },
 {
+    id: "lisema",
+    name: "Lisema Matsietsi",
+    bio: "I am the right person to give this talk because I have lived the transition it explores. I moved from being an individual technical contributor in banking to leading analysts, building teams, mentoring emerging professionals, and learning firsthand that technical excellence does not automatically translate into effective leadership.<br><br>Through my work on books such as Being an Analyst, Crafting Teams of Exceptional Analysts, and Take the Gap, I have turned those experiences into practical frameworks that can help other data specialists lead people, functions, and organisational change with greater confidence.",
+    title: "Take The Gap: The Journey from Data Specialist to Data Leader",
+    talk: "This talk is about how analysts can move beyond technical expertise to lead teams, functions and organisational change. Many data professionals spend years mastering technical skills, only to discover that leadership requires an entirely different toolkit. As organisations adopt flatter structures and AI automates more technical work, the ability to influence, coach and lead across teams has become a critical differentiator.<br><br>Drawing on lessons from building analyst teams, mentoring emerging analysts, and publishing a book for an executive coach titled \"Take The Gap\", this session introduces the Five Gaps Framework, a practical roadmap for moving from specialist to organisational leader.<br><br>You will learn how to navigate the transitions from contributor to trusted advisor, team leader, functional leader, and enterprise influencer. You will leave with actionable strategies for developing leadership capability, building high-performing teams, and creating organisational impact in the modern data profession.",
+    tracks: "Managing data teams",
+    photo: "speaker_lisema.png",
+},
+{
     id: "mfundo",
     name: "Mfundo Mbambo",
     bio: "I am a financial services and digital transformation professional and consultant with over a decade of experience across risk, compliance, technology and innovation and management consulting. My work sits at the intersection of emerging technology and responsible business, with a particular interest in how AI creates value while introducing new risks for organisations and society.<br><br>I bring both practitioner and researcher perspectives to this conversation. I hold a Master of Management in Digital Business from Wits Business School and have worked directly with AI, data and emerging technologies inside regulated financial services environments. This includes developing AI policies and governance frameworks, advising on AI use case assessment and governance readiness, and leading the rollout of AI-enabled solutions as a management consultant. I am a thought leader and have also conducted and presented research on AI ethics, responsible AI and AI governance both in local and international engagements. ",
@@ -99,16 +108,6 @@ var modalData = [
     talk: "Every organisation wants self-service analytics. But what happens when your operating model is built around autonomous domain squads, and Data Enablement is intentionally a lean function?<br><br>At Naked Insurance, self-service is not an aspiration — it is a requirement of how we operate. A traditional centralised data team, acting as a bottleneck between the business and its data, does not scale. We have framed the challenge differently: Naked does not need a data team; it needs a data practice.<br><br>This talk is not a technology tour. It is a practical story about how to derive a data practice from your own constraints — and keep iterating when the first design does not survive contact with reality.<br><br>We will share the method we use: start from organisational constraints, apply a small set of principles (leverage over throughput, golden paths over gatekeeping, governance as a by-product, keep the practice machine-readable), then place deliberate capability bets and revise them based on evidence.<br><br>Those bets, for us, have taken the shape of Platform → Data → Metadata → Semantics → Governance → AI agents — not as a prescribed maturity ladder, but as connected capabilities that need to reinforce one another for self-service to scale:<br><br>Platform — make participation easy. Shared foundations, reusable patterns and golden paths that enable autonomous teams without forcing them to reinvent the practice.<br><br>Data — make information available. Reliable data products that turn operational activity into information that can be used to answer real business questions.<br><br>Metadata — make knowledge discoverable. A shared map of the data landscape: what exists, what it represents, who owns it, where it came from and how it connects. This serves humans, teams, governance and AI agents alike.<br><br>Semantics — make meaning shared. Common business definitions, metrics and modelling conventions so people and systems do not interpret the same data differently. This is currently our least mature layer.<br><br>Governance — make trust scalable. Ownership, quality, security and responsible use embedded into the way data work gets done, rather than treated as a separate approval process.<br><br>AI agents — make the practice accessible. A natural-language interface to the data, knowledge and guardrails already in place — not a shortcut around the practice, but an interface to it.<br><br>We will be transparent about what is working, what we have revised along the way, and what is still ahead — particularly the consumption layer where business users ask questions and get trusted answers without opening an IDE.<br><br>The destination is not a perfect platform or an AI chatbot wired to a warehouse. It is a data-enabled organisation where teams can find the data, understand the data, trust the data — and eventually just ask the data.<br><br>Thesis: AI agents do not replace the data practice. They expose its strengths and weaknesses.",
     tracks: "AI (Including GenAI), Data Engineering, Data governance, security and privacy, Managing data teams",
     photo: "speaker_thato.png",
-},
-{
-    id: "lisema",
-    name: "Speaker — TBC",
-    bio: "",
-    title: "To be announced",
-    talk: "",
-    tracks: "",
-    photo: null,
-    tbc: true,
 },
 {
     id: "panel",
