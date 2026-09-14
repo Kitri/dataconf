@@ -1,7 +1,7 @@
 var modalData = [
 {
     id: "keynote",
-    name: "Keynote — TBC",
+    name: "Panel / Keynote",
     bio: "",
     title: "To be announced",
     talk: "",
@@ -27,6 +27,15 @@ var modalData = [
     talk: "Generative AI is transforming how we work, but most users have little understanding of the currency that powers it: tokens. Every prompt consumes tokens, creating not only financial cost but also environmental impact. As organisations rapidly adopt AI, unmanaged token consumption is becoming the next challenge for both FinOps and GreenOps teams.<br><br>This session explores token economics from a practical perspective. Attendees will learn how tokens translate into cost, why prompt design influences energy consumption, and why organisations should monitor, budget and optimise AI usage. Drawing on GreenOps principles and industry sustainability research, including insights from GreenPixie, the session demonstrates how responsible AI usage can reduce waste, control spend and lower carbon impact.<br>",
     tracks: "AI (Including GenAI), Other",
     photo: "speaker_carike.png",
+},
+{
+    id: "dan",
+    name: "Daniel Acton",
+    bio: "CTO of ADG, more details coming soon",
+    title: "Building AI-Accelerated Data Teams: Sustainable Velocity Across Data Engineering, Analytics and BI",
+    talk: "AI is no longer just a coding assistant — it's showing up across the entire data lifecycle: generating dbt models, writing SQL, building dashboards, and even answering business questions directly from raw data. That's exciting, and it's also creating real tension for data engineering, analytics, and BI teams who are trying to move fast without quietly eroding the skills, trust, and quality their work depends on.<br><br>In this talk, Daniel Acton draws on what he's been seeing across the industry — and putting into practice with his own company and customers — to unpack three tensions playing out in data teams right now: the risk of juniors learning to prompt before they learn to model; \"hallucination debt,\" where AI-generated insights are fluent and confident but quietly wrong; and tool sprawl, as every analyst brings their own copilot to a fragmented stack of dbt, notebooks, and BI tools.<br><br>Rather than a doom-and-gloom or hype take, this is a grounded, \"here's what's actually happening\" talk — concerns, contradictions, and what's genuinely working — for anyone leading or working inside a modern data team trying to figure out where AI helps and where it quietly hurts.",
+    tracks: "AI (Including GenAI), Data Engineering, Business Intelligence, Managing data teams",
+    photo: "speaker_dan.png",
 },
 {
     id: "geoffrey",
@@ -108,16 +117,6 @@ var modalData = [
     talk: "Every organisation wants self-service analytics. But what happens when your operating model is built around autonomous domain squads, and Data Enablement is intentionally a lean function?<br><br>At Naked Insurance, self-service is not an aspiration — it is a requirement of how we operate. A traditional centralised data team, acting as a bottleneck between the business and its data, does not scale. We have framed the challenge differently: Naked does not need a data team; it needs a data practice.<br><br>This talk is not a technology tour. It is a practical story about how to derive a data practice from your own constraints — and keep iterating when the first design does not survive contact with reality.<br><br>We will share the method we use: start from organisational constraints, apply a small set of principles (leverage over throughput, golden paths over gatekeeping, governance as a by-product, keep the practice machine-readable), then place deliberate capability bets and revise them based on evidence.<br><br>Those bets, for us, have taken the shape of Platform → Data → Metadata → Semantics → Governance → AI agents — not as a prescribed maturity ladder, but as connected capabilities that need to reinforce one another for self-service to scale:<br><br>Platform — make participation easy. Shared foundations, reusable patterns and golden paths that enable autonomous teams without forcing them to reinvent the practice.<br><br>Data — make information available. Reliable data products that turn operational activity into information that can be used to answer real business questions.<br><br>Metadata — make knowledge discoverable. A shared map of the data landscape: what exists, what it represents, who owns it, where it came from and how it connects. This serves humans, teams, governance and AI agents alike.<br><br>Semantics — make meaning shared. Common business definitions, metrics and modelling conventions so people and systems do not interpret the same data differently. This is currently our least mature layer.<br><br>Governance — make trust scalable. Ownership, quality, security and responsible use embedded into the way data work gets done, rather than treated as a separate approval process.<br><br>AI agents — make the practice accessible. A natural-language interface to the data, knowledge and guardrails already in place — not a shortcut around the practice, but an interface to it.<br><br>We will be transparent about what is working, what we have revised along the way, and what is still ahead — particularly the consumption layer where business users ask questions and get trusted answers without opening an IDE.<br><br>The destination is not a perfect platform or an AI chatbot wired to a warehouse. It is a data-enabled organisation where teams can find the data, understand the data, trust the data — and eventually just ask the data.<br><br>Thesis: AI agents do not replace the data practice. They expose its strengths and weaknesses.",
     tracks: "AI (Including GenAI), Data Engineering, Data governance, security and privacy, Managing data teams",
     photo: "speaker_thato.png",
-},
-{
-    id: "panel",
-    name: "Panel Discussion — TBC",
-    bio: "",
-    title: "To be announced",
-    talk: "",
-    tracks: "",
-    photo: null,
-    tbc: true,
 },
 ];
 
