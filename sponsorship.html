@@ -495,6 +495,20 @@
         font-weight: 600;
         margin-left: 10px;
     }
+    #sponsorship-proposal .proposal-section .addon-card.unavailable {
+        border-left-color: #6b7280;
+        background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        opacity: 0.85;
+    }
+    #sponsorship-proposal .proposal-section .unavailable-badge {
+        background: #6b7280;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        margin-left: 10px;
+    }
     #sponsorship-proposal .proposal-section .addon-description {
         color: #6b7280;
         margin-bottom: 15px;
@@ -1497,7 +1511,7 @@
                                     <div class="summary-card exhibition-premium">
                                         <div class="summary-card-header">
                                             <h4 class="summary-package-name">Premium Package</h4>
-                                            <div class="summary-price">R50,000<br><span style="font-size: 0.75rem; color: #dc2626;">(2 RESERVED)</span></div>
+                                            <div class="summary-price">R50,000<br><span style="font-size: 0.75rem; color: #dc2626;">(3 RESERVED)</span></div>
                                         </div>
                                         <div class="summary-features">
                                             • Premium exhibition space (1 table, 3 chairs)<br>
@@ -1513,7 +1527,7 @@
                                     <div class="summary-card exhibition-premium-plus">
                                         <div class="summary-card-header">
                                             <h4 class="summary-package-name">Premium Plus</h4>
-                                            <div class="summary-price">R85,000</div>
+                                            <div class="summary-price">R85,000<br><span style="font-size: 0.75rem; color: #6b7280; font-weight: 700;">(NOT AVAILABLE)</span></div>
                                         </div>
                                         <div class="summary-features">
                                             <em>Everything in Premium</em><br>
@@ -1526,7 +1540,7 @@
                                     <div class="summary-card exhibition-headline">
                                         <div class="summary-card-header">
                                             <h4 class="summary-package-name">Headline Package</h4>
-                                            <div class="summary-price">R100,000</div>
+                                            <div class="summary-price">R100,000<br><span style="font-size: 0.75rem; color: #6b7280; font-weight: 700;">(NOT AVAILABLE)</span></div>
                                         </div>
                                         <div class="summary-features">
                                             <em>Everything in Premium Plus</em><br>
@@ -1547,14 +1561,14 @@
                                      <div class="summary-card addon">
                                         <div class="summary-card-header">
                                             <h4 class="summary-package-name">Notebook & Pen</h4>
-                                            <div class="summary-price">R15,000</div>
+                                            <div class="summary-price">R15,000<br><span style="font-size: 0.75rem; color: #dc2626; font-weight: 700;">(RESERVED)</span></div>
                                         </div>
                                         <div class="summary-features">Custom branded notebooks & pens for all delegates + 1 delegate pass.</div>
                                     </div>
                                     <div class="summary-card addon">
                                         <div class="summary-card-header">
                                             <h4 class="summary-package-name">Coffee Sponsor</h4>
-                                            <div class="summary-price">R35,000</div>
+                                            <div class="summary-price">R35,000<br><span style="font-size: 0.75rem; color: #6b7280; font-weight: 700;">(NOT AVAILABLE)</span></div>
                                         </div>
                                         <div class="summary-features">Barista coffee with your logo on takeaway cups + 1 delegate pass.</div>
                                     </div>
@@ -1599,7 +1613,7 @@
                                     <div class="summary-card addon">
                                         <div class="summary-card-header">
                                             <h4 class="summary-package-name">Delegate T-Shirts</h4>
-                                            <div class="summary-price">R20,000</div>
+                                            <div class="summary-price">R20,000<br><span style="font-size: 0.75rem; color: #6b7280; font-weight: 700;">(NOT AVAILABLE)</span></div>
                                         </div>
                                         <div class="summary-features">
                                             Branding on delegate t-shirts for all delegates + 1 delegate pass.
@@ -1680,7 +1694,7 @@
                                         <h3 class="package-name">Premium Package</h3>
                                         <p class="package-subtitle">Maximum space impact and visibility</p>
                                         <div class="package-price">R50,000</div>
-                                        <div class="package-availability">Limited to 3 sponsors total <span class="reserved-tag" style="background: #ef4444; color: white; padding: 2px 6px; border-radius: 4px; font-size: 12px; margin-left: 8px;">2 reserved</span></div>
+                                        <div class="package-availability">Limited to 3 sponsors total <span class="reserved-tag" style="background: #ef4444; color: white; padding: 2px 6px; border-radius: 4px; font-size: 12px; margin-left: 8px;">3 reserved</span></div>
                                     </div>
                                     <ul class="features-list">
                                         <li>Premium Exhibition Space (1 table, 3 chairs)</li>
@@ -1700,7 +1714,7 @@
                                         <h3 class="package-name">Premium Plus Package</h3>
                                         <p class="package-subtitle">Premium exhibition package + feature branding add-on + speaking opportunity</p>
                                         <div class="package-price">R85,000</div>
-                                        <div class="package-availability">Upgrade of Premium. Limited to 2 sponsors.</div>
+                                        <div class="package-availability">Upgrade of Premium. Limited to 2 sponsors. <span class="unavailable-tag" style="background: #6b7280; color: white; padding: 2px 6px; border-radius: 4px; font-size: 12px; margin-left: 8px;">NOT AVAILABLE</span></div>
                                     </div>
                                     <div class="package-breakdown">
                                         <div class="included-features">
@@ -1747,7 +1761,7 @@
                                         <h3 class="package-name">Headline Package</h3>
                                         <p class="package-subtitle">Become THE name associated with DataConf</p>
                                         <div class="package-price">R100,000</div>
-                                        <div class="package-availability">Upgrade of Premium Plus. Limited to 1 sponsor.</div>
+                                        <div class="package-availability">Upgrade of Premium Plus. Limited to 1 sponsor. <span class="unavailable-tag" style="background: #6b7280; color: white; padding: 2px 6px; border-radius: 4px; font-size: 12px; margin-left: 8px;">NOT AVAILABLE</span></div>
                                     </div>
                                     <div class="package-breakdown">
                                         <div class="included-features">
@@ -1887,16 +1901,16 @@
                                 </div>
                                 
                                 <div class="addons-grid">
-                                    <div class="addon-card">
+                                    <div class="addon-card reserved">
                                         <div class="addon-header">
                                             <div class="addon-icon">📓</div>
                                             <div class="addon-info">
-                                                <h4>Notebook & Pen Branding</h4>
+                                                <h4>Notebook & Pen Branding <span class="reserved-badge">RESERVED</span></h4>
                                                 <div class="addon-price">R15,000</div>
                                             </div>
                                         </div>
                                         <p class="addon-description">
-                                            Custom branded notebooks + pens for all delegates. 
+                                            Custom branded notebooks + pens for all delegates.
                                         </p>
                                         <div class="addon-includes">
                                             <strong>Includes:</strong> 1 delegate pass
@@ -1921,11 +1935,11 @@
                                             Exclusive for Premium Plus or Headline sponsors
                                         </div>
                                     </div>
-                                    <div class="addon-card">
+                                    <div class="addon-card unavailable">
                                         <div class="addon-header">
                                             <div class="addon-icon">🎽</div>
                                             <div class="addon-info">
-                                                <h4>Delegate T-Shirt Branding</h4>
+                                                <h4>Delegate T-Shirt Branding <span class="unavailable-badge">NOT AVAILABLE</span></h4>
                                                 <div class="addon-price">R20,000</div>
                                             </div>
                                         </div>
@@ -1981,11 +1995,11 @@
                                 </div>
                                 
                                 <div class="addons-grid">
-                                    <div class="addon-card">
+                                    <div class="addon-card unavailable">
                                         <div class="addon-header">
                                             <div class="addon-icon">☕</div>
                                             <div class="addon-info">
-                                                <h4>Coffee Sponsor</h4>
+                                                <h4>Coffee Sponsor <span class="unavailable-badge">NOT AVAILABLE</span></h4>
                                                 <div class="addon-price">R35,000</div>
                                             </div>
                                         </div>
