@@ -150,10 +150,12 @@
                 }
                 
                 .welcome-hosts img {
-                    width: 40px;
-                    height: 40px;
+                    width: 70px;
+                    height: 70px;
                     border-radius: 50%;
                     object-fit: cover;
+                    border: 2px solid #fff;
+                    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
                 }
                 
                 .welcome-text {
@@ -347,15 +349,20 @@
                     <div class="time-bar break-bar" style="font-size: 12pt">8:00 - 9:00 <b>Registration</b></div>
                     </div>
 
-                    <!-- Keynote -->
+                    <!-- Welcome -->
                     <div class="session-container">
-                    <div class="time-bar" style="font-size: 12pt">9:00 - 10:15 <b>Welcome & Panel / Keynote</b></div>
+                    <div class="time-bar" style="font-size: 12pt">9:00 - 10:15 <b>Welcome</b></div>
                         <div class="session-content">
-                            <div class="keynote-speaker" onclick="openSpeakerModal('keynote')" style="justify-content: center; text-align: center;">
-                                <div style="width:150px; height:150px; border-radius:50%; background:#f0f0f0; border:2px dashed #ccc; display:flex; align-items:center; justify-content:center; font-size:13px; color:#999; text-align:center; margin: 0 auto;">Photo<br>TBC</div>
+                            <div class="welcome-content" style="flex-direction: column; justify-content: center; text-align: center; gap: 8px;">
+                                <div class="welcome-hosts" style="justify-content: center; margin-right: 0;">
+                                    <img src="assets/images/candice.jpeg" alt="Candice">
+                                    <img src="assets/images/mercia.jpeg" alt="Mercia">
+                                    <img src="assets/images/speakers_2026/nantes.jpg" alt="Nantes Kirsten">
+                                </div>
                                 <div>
-                                    <div class="keynote-badge">🎤 Panel / Keynote</div>
-                                    <div class="speaker-name" style="font-size: 20px;">To be announced</div>
+                                    <div class="keynote-badge">Welcome</div>
+                                    <div class="speaker-name" style="font-size: 20px;">Mercia &amp; Candice (your hosts)</div>
+                                    <div class="talk-title" style="-webkit-line-clamp: unset;">with Nantes Kirsten, GM for AI at MTN South Africa</div>
                                 </div>
                             </div>
                         </div>
@@ -517,7 +524,7 @@
 
                     <!-- Data Mixer -->
                     <div class="session-container">
-                        <div class="time-bar break-bar" style="font-size: 12pt">16:20 - 17:00 <b>Data Mixer - Social and networking (Cash Bar)</b></div>
+                        <div class="time-bar break-bar" style="font-size: 12pt">16:20 - 17:00 <b>Data Mixer - Social and networking</b></div>
                     </div>
                 </div>
             </div>
@@ -689,6 +696,18 @@
                 <div class="col-md-3 sponsor-card align-center">
                     <a href="https://www.x-idian.com/" target="_blank">
                         <img src="assets/images/x-idian.png" alt="X-idian" class="sponsor-logo" style="width: 55%; margin-top: 8%;">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Speaker Dinner Sponsor -->
+        <div class="sponsor-tier">
+            <div class="align-center"><span class="tier-badge feature-badge">Speaker Dinner Sponsor</span></div>
+            <div class="row justify-content-center">
+                <div class="col-md-3 sponsor-card align-center">
+                    <a href="https://www.cobaltanalytics.io" target="_blank">
+                        <img src="assets/images/Cobalt-Analytics-Logo-square-whiteblue.png" alt="Cobalt Analytics" class="sponsor-logo" style="width: 55%; margin-top: 8%;">
                     </a>
                 </div>
             </div>
