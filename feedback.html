@@ -1,8 +1,500 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript">
-        var redirectUrl = "https://form.jotform.com/252590801506555";    
-        window.location.href = redirectUrl;
-      </script>
+  <script>
+    /* ============================================================
+       FAIL-SAFE: set to true to send everyone to the Jotform instead.
+       Every "feedback" link on the site points at this page, so this one line switches them all.
+       ============================================================ */
+    var USE_JOTFORM_FALLBACK = false;
+    var JOTFORM_URL = "https://form.jotform.com/252590801506555";
+    if (USE_JOTFORM_FALLBACK) window.location.replace(JOTFORM_URL);
+  </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9NNEPL3C4K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9NNEPL3C4K');
+</script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="description" content="Share your feedback on DataConf 2026">
+  <meta property="og:title" content="DataConf 2026 Feedback">
+  <meta property="og:description" content="Share your feedback on DataConf 2026">
+  <meta property="og:image" content="https://www.dataconf.co.za/assets/images/Logo_black_circle.png">
+  <meta property="og:url" content="https://www.dataconf.co.za/feedback.html">
+  <link rel="shortcut icon" href="assets/images/Logo_black_circle.png" type="image/x-icon">
+  <title>DataConf 2026 - Feedback</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/kaw3hbo.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
+  <style>
+    .fb-section { padding: 120px 0 4rem; background: #f4f4f4; }
+    .fb-wrap { max-width: 780px; margin: 0 auto; }
+    .fb-intro { text-align: center; margin-bottom: 1.5rem; }
+    .fb-intro h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: .5rem; }
+    .fb-intro p { color: #555; font-size: 1rem; margin-bottom: .25rem; }
+    .fb-card { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.08); padding: 1.5rem 1.5rem 1.25rem; margin-bottom: 1rem; }
+    .fb-card h2 { font-size: 1.25rem; font-weight: 700; margin: 0 0 .25rem; }
+    .fb-card .fb-sub { color: #777; font-size: .9rem; margin-bottom: 1rem; }
+    .fb-badge { display: inline-block; background: #f7931e; color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; padding: 3px 10px; border-radius: 12px; margin-bottom: .5rem; }
+    .fb-badge.green { background: #84a800; }
+    .fb-label { display: block; font-weight: 600; font-size: .95rem; color: #333; margin-bottom: .4rem; }
+    .fb-req { color: #d9534f; }
+    .fb-field { margin-bottom: 1.1rem; }
+    .fb-field .form-control { font-size: 1rem; }
+    .fb-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+    @media (max-width: 575px) { .fb-row2 { grid-template-columns: 1fr; } .fb-card { padding: 1.1rem 1rem 1rem; } }
+
+    /* Pill-style radio options */
+    .fb-opts { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .fb-opts label { margin: 0; cursor: pointer; }
+    .fb-opts input { position: absolute; opacity: 0; pointer-events: none; }
+    .fb-opts span { display: inline-block; padding: .45rem .9rem; border: 1px solid #ccc; border-radius: 20px; font-size: .9rem; background: #fafafa; color: #444; transition: all .15s ease; user-select: none; }
+    .fb-opts label:hover span { border-color: #f7931e; }
+    .fb-opts input:checked + span { background: #f7931e; border-color: #f7931e; color: #fff; font-weight: 600; }
+    .fb-opts input:focus-visible + span { outline: 2px solid #333; outline-offset: 2px; }
+
+    /* Rating matrix */
+    .fb-matrix { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+    .fb-matrix th { font-size: .75rem; font-weight: 600; color: #777; text-align: center; padding: 0 .25rem .4rem; }
+    .fb-matrix td { padding: .55rem .25rem; border-top: 1px solid #eee; text-align: center; }
+    .fb-matrix td.q { text-align: left; font-size: .92rem; color: #333; padding-right: .5rem; }
+    .fb-matrix input[type=radio] { width: 20px; height: 20px; accent-color: #f7931e; cursor: pointer; }
+    @media (max-width: 575px) {
+      .fb-matrix thead { display: none; }
+      .fb-matrix tr { display: block; border-top: 1px solid #eee; padding: .5rem 0; }
+      .fb-matrix td { display: inline-block; border: 0; padding: .2rem .3rem; }
+      .fb-matrix td.q { display: block; padding: 0 0 .3rem; font-weight: 600; }
+      .fb-matrix td label.m { font-size: .8rem; color: #555; display: inline-flex; align-items: center; gap: .3rem; }
+    }
+    @media (min-width: 576px) { .fb-matrix td label.m span { display: none; } }
+
+    /* Scale 1-10 */
+    .fb-scale { display: grid; grid-template-columns: repeat(10, 1fr); gap: .3rem; }
+    .fb-scale span { display: block; text-align: center; padding: .5rem 0; }
+    @media (max-width: 575px) { .fb-scale { grid-template-columns: repeat(5, 1fr); } }
+    .fb-scale label { display: block; }
+    .fb-scale-ends { display: flex; justify-content: space-between; font-size: .8rem; color: #777; margin-top: .3rem; }
+
+    .fb-talk-pick .fb-opts { flex-direction: column; }
+    .fb-talk-pick .fb-opts span { border-radius: 8px; width: 100%; text-align: left; padding: .6rem .9rem; }
+    .fb-talk-pick .fb-opts span small { display: block; font-weight: 400; opacity: .85; }
+    .fb-talk-pick .fb-opts label { display: block; }
+    .fb-hidden { display: none; }
+    .fb-draft { font-size: .8rem; color: #84a800; text-align: center; min-height: 1.2em; margin-top: .5rem; }
+    .fb-error { color: #d9534f; font-size: .85rem; margin-top: .3rem; display: none; }
+    .fb-field.invalid .fb-error { display: block; }
+    .fb-field.invalid .form-control { border-color: #d9534f; }
+    .fb-submit { width: 100%; font-size: 1.05rem; padding: .8rem; }
+    .fb-alert { border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1rem; display: none; }
+    .fb-alert.ok { background: #eef5d6; color: #3d4d00; display: block; }
+    .fb-alert.bad { background: #fbe3e2; color: #8a1f1b; display: block; }
+    .fb-hp { position: absolute; left: -9999px; }
+  </style>
 </head>
+<body>
+
+<section data-bs-version="5.1" class="menu menu1 cid-sFGzlAXw3z" once="menu" id="menu1-6">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="index.html">
+                        <img src="assets/images/dataconf-logo.png" alt="DataConf 2026" style="height: 3.6rem;">
+                    </a>
+                </span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                        <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="agenda.html">Agenda</a></li>
+                        <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="speakers.html">Speakers</a></li>
+                        <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="sponsorship.html">Sponsorship</a></li>
+                        <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="dataconfprevious.html">Previous Events</a></li>
+                </ul>
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="feedback.html" target="_blank" rel="noopener">Speaker Feedback</a></div>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="fb-section">
+  <div class="container">
+    <div class="fb-wrap">
+      <div class="fb-intro">
+        <h1>DataConf 2026 Feedback</h1>
+        <p>Thank you for giving us feedback! Your speakers will receive it, and it shapes next year's DataConf.</p>
+        <p>You can fill this in throughout the day. Your answers are saved on this device as you go, so come back after each session and submit at the end.</p>
+      </div>
+
+      <div id="fb-result" class="fb-alert" role="status" aria-live="polite"></div>
+
+      <form id="fb-form" novalidate>
+        <input type="text" name="fb_trap_x" class="fb-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <!-- About you -->
+        <div class="fb-card">
+          <h2>About you</h2>
+          <div class="fb-sub">So we can follow up if needed.</div>
+          <div class="fb-row2">
+            <div class="fb-field" data-required>
+              <label class="fb-label" for="first_name">First name <span class="fb-req">*</span></label>
+              <input class="form-control" id="first_name" name="First name" autocomplete="given-name">
+              <div class="fb-error">Please add your first name.</div>
+            </div>
+            <div class="fb-field" data-required>
+              <label class="fb-label" for="last_name">Last name <span class="fb-req">*</span></label>
+              <input class="form-control" id="last_name" name="Last name" autocomplete="family-name">
+              <div class="fb-error">Please add your last name.</div>
+            </div>
+          </div>
+          <div class="fb-field" data-required data-email>
+            <label class="fb-label" for="email">Email <span class="fb-req">*</span></label>
+            <input class="form-control" id="email" name="Email" type="email" autocomplete="email">
+            <div class="fb-error">Please add a valid email address.</div>
+          </div>
+          <div class="fb-field" data-required data-radio="Mailing list">
+            <span class="fb-label">Attendees are automatically subscribed to DataConf's mailing list. May we continue to contact you, e.g. about future events? <span class="fb-req">*</span></span>
+            <div class="fb-opts">
+              <label><input type="radio" name="Mailing list" value="Yes, keep me subscribed"><span>Yes, keep me subscribed</span></label>
+              <label><input type="radio" name="Mailing list" value="Please unsubscribe me"><span>Please unsubscribe me</span></label>
+            </div>
+            <div class="fb-error">Please choose one.</div>
+          </div>
+        </div>
+
+        <!-- Panel and sessions rendered from AGENDA below -->
+        <div id="fb-sessions"></div>
+
+        <!-- Overall -->
+        <div class="fb-card">
+          <span class="fb-badge green">The event</span>
+          <h2 style="margin-bottom:1rem">Overall</h2>
+          <div class="fb-field" data-required data-radio="Overall (1-10)">
+            <span class="fb-label">Overall, how did you experience DataConf 2026? <span class="fb-req">*</span></span>
+            <div class="fb-scale fb-opts" id="fb-scale"></div>
+            <div class="fb-scale-ends"><span>1 = Disappointed</span><span>10 = Delighted</span></div>
+            <div class="fb-error">Please pick a number.</div>
+          </div>
+
+          <div class="fb-field" data-required data-radio="Could see and hear clearly">
+            <span class="fb-label">Were you able to see and hear the presentations clearly? <span class="fb-req">*</span></span>
+            <div class="fb-opts" data-reveal="av_detail" data-reveal-on="No">
+              <label><input type="radio" name="Could see and hear clearly" value="Yes"><span>Yes</span></label>
+              <label><input type="radio" name="Could see and hear clearly" value="No"><span>No</span></label>
+            </div>
+            <div class="fb-error">Please choose one.</div>
+          </div>
+          <div class="fb-field fb-hidden" id="av_detail">
+            <label class="fb-label" for="av_detail_in">What made it difficult?</label>
+            <textarea maxlength="3000" class="form-control" id="av_detail_in" name="See/hear details" rows="2"></textarea>
+          </div>
+
+          <div class="fb-field" data-required data-radio="Catering">
+            <span class="fb-label">Were you satisfied with the catering? <span class="fb-req">*</span></span>
+            <div class="fb-opts" data-reveal="cater_detail" data-reveal-on="It was okay|No">
+              <label><input type="radio" name="Catering" value="Yes"><span>Yes</span></label>
+              <label><input type="radio" name="Catering" value="It was okay"><span>It was okay</span></label>
+              <label><input type="radio" name="Catering" value="No"><span>No</span></label>
+            </div>
+            <div class="fb-error">Please choose one.</div>
+          </div>
+          <div class="fb-field fb-hidden" id="cater_detail">
+            <label class="fb-label" for="cater_detail_in">What could we improve?</label>
+            <textarea maxlength="3000" class="form-control" id="cater_detail_in" name="Catering details" rows="2"></textarea>
+          </div>
+
+          <div class="fb-field">
+            <label class="fb-label" for="other">Do you have any other feedback for us about the event?</label>
+            <textarea maxlength="3000" class="form-control" id="other" name="Other event feedback" rows="4"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary display-4 fb-submit" id="fb-submit">Submit feedback</button>
+        <div class="fb-draft" id="fb-draft"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="footer3 cid-tBkQCXIUjU mbr-reveal" once="footers" id="footer3-i">
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="row row-links">
+                <ul class="foot-menu">
+                <li class="foot-menu-item mbr-fonts-style display-7"><strong>Contact Us</strong></li></ul>
+            </div>
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                <div class="soc-item">
+                        <a href="mailto:info@dataconf.co.za">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.facebook.com/dataconfza/" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.instagram.com/dataconfza/" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.linkedin.com/company/dataconfza/" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://twitter.com/dataconfza">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
+                        </a>
+                    </div></div>
+            </div>
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                    <a href="codeofconduct.html" target="_blank">Code of conduct</a> | <a href="ticket_terms.html" target="_blank">Ticket Terms &amp; Conditions</a>
+                </p>
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">DataConf 2026</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/smoothscroll/smooth-scroll.js"></script>
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>
+<script src="assets/theme/js/script.js"></script>
+
+<script>
+/* ============================================================
+   CONFIG: paste your Google Apps Script web app URL here
+   (see google-apps-script/feedback.gs for setup steps)
+   ============================================================ */
+const FEEDBACK_ENDPOINT = "https://script.google.com/macros/s/AKfycbxaqV_kaRgIOVq4qCzKOgij1YRJ1TvjDpM1vIgXNwsAKSRoPzvJBqPv2vjoVE0pcONJaA/exec";
+
+/* 2026 agenda. Edit here if the programme changes. */
+const PANEL = {
+  key: "Panel",
+  title: "AI Has Changed the Game. How Do We Lead the Craft?",
+  time: "9:00 - 10:15",
+  criteria: ["Relevant to you", "Interesting / entertaining", "Well moderated / discussed"]
+};
+const SESSIONS = [
+  { n: 1, time: "10:40 - 11:20", talks: [
+    ["Dr Thabang Mathonsi", "Healthcare in the Age of Agents: The AI Paradigm Shift and its Impact in a Regulated World", "Auditorium"],
+    ["Geoffrey Lydall", "Intellectual and Emotional Obesity - Fast food in your brain", "Co-Lab"] ]},
+  { n: 2, time: "11:30 - 12:10", talks: [
+    ["Thato Mokoena", "Trekking to the Data Promised Land: Building a Data Practice, Not a Data Team", "Auditorium"],
+    ["Abia Duvenage", "Thorough, Documented & Wrong: The Problems Methodology Can't Fix", "Co-Lab"] ]},
+  { n: 3, time: "12:20 - 13:00", talks: [
+    ["Paul Domanski", "Vanta Rising: How I Built an AI-Native Operating System for a Global Brand House", "Auditorium"],
+    ["Rishal Hurbans", "The Algorithms Inside Generative AI", "Co-Lab"] ]},
+  { n: 4, time: "14:00 - 14:40", talks: [
+    ["Carike Blignaut-Staden", "Token Economics: The Hidden Cost of Every Prompt", "Auditorium"],
+    ["Michael Victor", "An Introduction to Data Science with the Help of Banana-Throwing Gorillas", "Co-Lab"] ]},
+  { n: 5, time: "14:50 - 15:30", talks: [
+    ["Daniel Acton", "Building AI-Accelerated Data Teams: Sustainable Velocity Across Data Engineering, Analytics and BI", "Auditorium"],
+    ["Mfundo Mbambo", "What Does AI Think Africa Looks Like? An Experiment in LLM Bias", "Co-Lab"] ]},
+  { n: 6, time: "15:40 - 16:20", talks: [
+    ["Lisema Matsietsi", "Take The Gap: The Journey from Data Specialist to Data Leader", "Auditorium"],
+    ["James McGillivray", "Turning Data into Stories People Remember", "Co-Lab"] ]}
+];
+const TALK_CRITERIA = ["Relevant to you", "Interesting / entertaining", "Well presented (speaker)", "Well packaged (slides / presentation)"];
+const SCALE = ["Missed the mark", "Acceptable", "Excellent"];
+const NOT_ATTENDED = "Didn't attend a talk this slot";
+const DRAFT_KEY = "dataconf2026-feedback-draft";
+
+/* ---------- rendering ---------- */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function matrix(prefix, criteria) {
+  let h = '<table class="fb-matrix"><thead><tr><th></th>' + SCALE.map(s => `<th>${s}</th>`).join("") + '</tr></thead><tbody>';
+  criteria.forEach(c => {
+    const name = `${prefix} - ${c}`;
+    h += `<tr><td class="q">${esc(c)}</td>` + SCALE.map(s =>
+      `<td><label class="m"><input type="radio" name="${esc(name)}" value="${esc(s)}" aria-label="${esc(c)}: ${esc(s)}"><span>${s}</span></label></td>`).join("") + '</tr>';
+  });
+  return h + '</tbody></table>';
+}
+
+function render() {
+  let h = `<div class="fb-card">
+    <span class="fb-badge">Opening</span>
+    <h2>Panel discussion</h2>
+    <div class="fb-sub">${PANEL.time} &middot; ${esc(PANEL.title)}</div>
+    <div class="fb-field">
+      <span class="fb-label">Did you attend the panel?</span>
+      <div class="fb-opts" data-reveal="panel_body" data-reveal-on="Yes">
+        <label><input type="radio" name="Panel - Attended" value="Yes"><span>Yes</span></label>
+        <label><input type="radio" name="Panel - Attended" value="No"><span>No</span></label>
+      </div>
+    </div>
+    <div id="panel_body" class="fb-hidden">
+      ${matrix("Panel", PANEL.criteria)}
+      <div class="fb-field">
+        <label class="fb-label" for="panel_c">Any other feedback about the panel?</label>
+        <textarea maxlength="3000" class="form-control" id="panel_c" name="Panel - Comments" rows="2"></textarea>
+      </div>
+    </div>
+  </div>`;
+
+  SESSIONS.forEach(s => {
+    const p = `S${s.n}`;
+    h += `<div class="fb-card">
+      <span class="fb-badge green">Session ${s.n}</span>
+      <h2>Which talk did you attend?</h2>
+      <div class="fb-sub">${s.time}</div>
+      <div class="fb-field fb-talk-pick">
+        <div class="fb-opts" data-reveal="${p}_body" data-reveal-not="${esc(NOT_ATTENDED)}">
+          ${s.talks.map(t => `<label><input type="radio" name="${p} - Talk" value="${esc(t[0] + ': ' + t[1])}"><span>${esc(t[0])}<small>${esc(t[1])} &middot; ${t[2]}</small></span></label>`).join("")}
+          <label><input type="radio" name="${p} - Talk" value="${esc(NOT_ATTENDED)}"><span>${NOT_ATTENDED}</span></label>
+        </div>
+      </div>
+      <div id="${p}_body" class="fb-hidden">
+        ${matrix(p, TALK_CRITERIA)}
+        <div class="fb-field">
+          <label class="fb-label" for="${p}_c">Any other feedback for the speaker?</label>
+          <textarea maxlength="3000" class="form-control" id="${p}_c" name="${p} - Comments" rows="2"></textarea>
+        </div>
+      </div>
+    </div>`;
+  });
+  document.getElementById("fb-sessions").innerHTML = h;
+
+  document.getElementById("fb-scale").innerHTML = Array.from({length: 10}, (_, i) =>
+    `<label><input type="radio" name="Overall (1-10)" value="${i + 1}"><span>${i + 1}</span></label>`).join("");
+}
+
+/* ---------- conditional sections ---------- */
+function applyReveals() {
+  document.querySelectorAll("[data-reveal]").forEach(group => {
+    const target = document.getElementById(group.dataset.reveal);
+    const checked = group.querySelector("input:checked");
+    const val = checked ? checked.value : null;
+    let show;
+    if (group.dataset.revealOn) show = val !== null && group.dataset.revealOn.split("|").includes(val);
+    else show = val !== null && val !== group.dataset.revealNot;
+    target.classList.toggle("fb-hidden", !show);
+  });
+}
+
+/* ---------- draft save (this device only) ---------- */
+function collect(onlyVisible) {
+  const form = document.getElementById("fb-form");
+  const out = {};
+  form.querySelectorAll("input, textarea, select").forEach(el => {
+    if (!el.name || el.name === "fb_trap_x") return;
+    // Hidden (skipped) questions are still sent, but blank, so sheet columns stay in a fixed order
+    if (onlyVisible && el.closest(".fb-hidden")) { if (!(el.name in out)) out[el.name] = ""; return; }
+    if (el.type === "radio") { if (el.checked) out[el.name] = el.value; else if (!(el.name in out)) out[el.name] = ""; }
+    else out[el.name] = el.value.trim();
+  });
+  return out;
+}
+let draftTimer;
+function saveDraft() {
+  clearTimeout(draftTimer);
+  draftTimer = setTimeout(() => {
+    try {
+      localStorage.setItem(DRAFT_KEY, JSON.stringify(collect(false)));
+      const t = new Date().toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"});
+      document.getElementById("fb-draft").textContent = `Draft saved on this device at ${t}. Remember to submit at the end of the day.`;
+    } catch (e) {}
+  }, 300);
+}
+function loadDraft() {
+  let d;
+  try { d = JSON.parse(localStorage.getItem(DRAFT_KEY) || "null"); } catch (e) {}
+  if (!d) return;
+  const form = document.getElementById("fb-form");
+  Object.entries(d).forEach(([name, val]) => {
+    form.querySelectorAll(`[name="${CSS.escape(name)}"]`).forEach(el => {
+      if (el.type === "radio") el.checked = el.value === val;
+      else el.value = val;
+    });
+  });
+  document.getElementById("fb-draft").textContent = "Welcome back. We restored the answers you saved earlier.";
+}
+
+/* ---------- validation ---------- */
+function validate() {
+  let first = null;
+  document.querySelectorAll("[data-required]").forEach(f => {
+    let ok;
+    if (f.dataset.radio) ok = !!f.querySelector("input:checked");
+    else {
+      const el = f.querySelector("input, textarea");
+      ok = el.value.trim() !== "" && (!("email" in f.dataset) || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()));
+    }
+    f.classList.toggle("invalid", !ok);
+    if (!ok && !first) first = f;
+  });
+  if (first) first.scrollIntoView({behavior: "smooth", block: "center"});
+  return !first;
+}
+
+/* ---------- submit ---------- */
+async function submit(e) {
+  e.preventDefault();
+  const result = document.getElementById("fb-result");
+  result.className = "fb-alert";
+  if (!validate()) return;
+  if (document.querySelector('[name="fb_trap_x"]').value) return; // bot
+
+  if (!FEEDBACK_ENDPOINT.startsWith("https://script.google.com/")) {
+    result.className = "fb-alert bad";
+    result.textContent = "The feedback form isn't connected yet. Please let a DataConf organiser know.";
+    return;
+  }
+
+  const btn = document.getElementById("fb-submit");
+  btn.disabled = true; btn.textContent = "Sending...";
+  const payload = Object.assign({ "Submitted from": "dataconf.co.za/feedback.html" }, collect(true));
+
+  try {
+    // text/plain avoids a CORS preflight, which Apps Script does not support
+    await fetch(FEEDBACK_ENDPOINT, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload) });
+    try { localStorage.removeItem(DRAFT_KEY); } catch (err) {}
+    document.getElementById("fb-form").style.display = "none";
+    result.className = "fb-alert ok";
+    result.innerHTML = "<strong>Thank you!</strong> Your feedback has been submitted. See you at DataConf 2027.";
+    window.scrollTo({top: 0, behavior: "smooth"});
+  } catch (err) {
+    result.className = "fb-alert bad";
+    result.textContent = "Something went wrong sending your feedback. Please check your connection and try again. Your answers are still saved on this device.";
+    btn.disabled = false; btn.textContent = "Submit feedback";
+  }
+}
+
+render();
+loadDraft();
+applyReveals();
+const formEl = document.getElementById("fb-form");
+formEl.addEventListener("change", () => { applyReveals(); saveDraft(); });
+formEl.addEventListener("input", e => {
+  saveDraft();
+  const f = e.target.closest(".fb-field.invalid"); if (f) f.classList.remove("invalid");
+});
+formEl.addEventListener("change", e => { const f = e.target.closest(".fb-field.invalid"); if (f) f.classList.remove("invalid"); });
+formEl.addEventListener("submit", submit);
+</script>
+</body>
 </html>
