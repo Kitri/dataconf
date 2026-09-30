@@ -94,6 +94,8 @@
                 <div>
                 <h4 class="mbr-section-title mbr-fonts-style mb-4 display-2 align-center">DataConf 2026 Agenda</h4>
                 <h5 class="mbr-fonts-style align-center mb-4">1 October 2026 • Click on speakers to see their talk details</h5>
+                <p class="align-center mb-4" style="font-weight: 600;">🤝 Visit our sponsors in the networking area!</p>
+                <p class="align-center mb-4"><a href="assets/files/DataConf%202026%20Agenda.pdf" target="_blank">⬇️ Download Agenda PDF</a></p>
                 
                 </div>
                 <style>
@@ -209,6 +211,37 @@
                 
                 .room-divider {
                     background: #ddd;
+                }
+                
+                .room-header {
+                    display: grid;
+                    grid-template-columns: 1fr 2px 1fr;
+                    gap: 15px;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                
+                .room-header-label {
+                    font-size: 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.6px;
+                    color: #f7931e;
+                    text-align: center;
+                }
+                
+                .room-header .room-divider {
+                    background: transparent;
+                }
+                
+                @media (max-width: 768px) {
+                    .room-header {
+                        grid-template-columns: 1fr;
+                        gap: 4px;
+                    }
+                    .room-header .room-divider {
+                        display: none;
+                    }
                 }
                 
                 .room-session {
@@ -351,7 +384,7 @@
 
                     <!-- Welcome & Panel -->
                     <div class="session-container">
-                    <div class="time-bar" style="font-size: 12pt">9:00 - 10:15 <b>Welcome &amp; Panel Discussion</b></div>
+                    <div class="time-bar" style="font-size: 12pt">9:00 - 10:15 <b>Welcome &amp; Panel Discussion</b> <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #f7931e; margin-left: 8px;">📍 Auditorium</span></div>
                         <div class="session-content">
                             <div class="room-sessions">
                                 <div class="welcome-content" style="flex-direction: column; justify-content: center; text-align: center; gap: 8px;">
@@ -376,6 +409,13 @@
                     <!-- Tea Break -->
                     <div class="session-container">
                     <div class="time-bar break-bar" style="font-size: 12pt">10:15 - 10:40 Tea Break</div>
+                    </div>
+
+                    <!-- Room labels -->
+                    <div class="room-header">
+                        <div class="room-header-label">Auditorium</div>
+                        <div class="room-divider"></div>
+                        <div class="room-header-label">Co-Lab</div>
                     </div>
 
                     <!-- Session 1 -->
